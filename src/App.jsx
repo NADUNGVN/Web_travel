@@ -11,6 +11,16 @@ import { SupabaseConfigModal } from './components/SupabaseConfigModal';
 import { mockVillas } from './data/mockVillas';
 import { getCurrentUser, isSupabaseConnected, supabase } from './lib/supabase';
 
+// Get unique device fingerprint ID for vote anti-spam
+export const getDeviceId = () => {
+  let id = localStorage.getItem('trip_device_id');
+  if (!id) {
+    id = 'device_' + Math.random().toString(36).substring(2, 9) + Date.now().toString(36);
+    localStorage.setItem('trip_device_id', id);
+  }
+  return id;
+};
+
 export function App() {
   const [activeTab, setActiveTab] = useState('stays');
   const [currentUser, setCurrentUser] = useState(null);
@@ -19,8 +29,10 @@ export function App() {
   const [selectedDetailVilla, setSelectedDetailVilla] = useState(null);
   const [showSupabaseConfig, setShowSupabaseConfig] = useState(false);
 
-  // Load User & Saved Votes
+  // Initialize User, Device ID & Votes
   useEffect(() => {
+    getDeviceId(); // Ensure device ID exists
+
     const initUser = async () => {
       const user = await getCurrentUser();
       setCurrentUser(user);
@@ -43,7 +55,7 @@ export function App() {
       return () => subscription.unsubscribe();
     }
 
-    // Load votes from local storage
+    // Load initial local votes
     const savedVotes = localStorage.getItem('trip_user_votes');
     if (savedVotes) {
       try {
@@ -52,6 +64,25 @@ export function App() {
         console.error('Error loading saved votes', err);
       }
     }
+
+    // BroadcastChannel for instant multi-tab / same-origin realtime sync
+    let bc;
+    try {
+      if ('BroadcastChannel' in window) {
+        bc = new BroadcastChannel('trip_votes_channel');
+        bc.onmessage = (event) => {
+          if (event.data && event.data.type === 'VOTE_UPDATED') {
+            setUserVotes(event.data.votes);
+          }
+        };
+      }
+    } catch (e) {
+      console.warn('BroadcastChannel error', e);
+    }
+
+    return () => {
+      if (bc) bc.close();
+    };
   }, []);
 
   // Handle Voting (3-state: 'yes' (+2), 'maybe' (+1), 'no' (-2))
@@ -63,7 +94,20 @@ export function App() {
       } else {
         updated[candidateId] = voteType;
       }
+      
       localStorage.setItem('trip_user_votes', JSON.stringify(updated));
+
+      // Broadcast to other tabs/windows instantly
+      try {
+        if ('BroadcastChannel' in window) {
+          const bc = new BroadcastChannel('trip_votes_channel');
+          bc.postMessage({ type: 'VOTE_UPDATED', votes: updated });
+          bc.close();
+        }
+      } catch (e) {
+        console.warn('Broadcast post error', e);
+      }
+
       return updated;
     });
   };
@@ -170,4 +214,4 @@ export function App() {
       )}
     </div>
   );
-}
+};

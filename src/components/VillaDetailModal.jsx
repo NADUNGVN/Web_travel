@@ -1,12 +1,23 @@
 import React, { useState, useEffect } from 'react';
-import { X, MapPin, Bed, Bath, Users, ExternalLink, MessageSquare, Send, Check, Clock, Car } from 'lucide-react';
+import { X, MapPin, Bed, Bath, Users, ExternalLink, MessageSquare, Send } from 'lucide-react';
 import { getCostPerPerson } from '../data/mockVillas';
+
+const FALLBACK_IMAGE = "https://images.unsplash.com/photo-1512915922686-57c11dde9b6b?auto=format&fit=crop&w=1000&q=80";
 
 export const VillaDetailModal = ({ villa, onClose, userVote, onVote, currentUser }) => {
   const [comments, setComments] = useState([]);
   const [newComment, setNewComment] = useState('');
 
-  // Load real comments from local storage for this villa
+  // Safe image list resolution for both Villas and Food Items
+  const imagesList = villa?.images && villa.images.length > 0
+    ? villa.images
+    : (villa?.image ? [villa.image] : [FALLBACK_IMAGE]);
+
+  // Safe price & specs calculation
+  const isFoodItem = villa?.itemType === 'food' || !villa?.priceTotal;
+  const costPerPerson = isFoodItem ? 0 : getCostPerPerson(villa.priceTotal, 20, 2);
+
+  // Load real comments from local storage for this villa/food item
   useEffect(() => {
     if (!villa) return;
     const saved = localStorage.getItem(`trip_comments_${villa.id}`);
@@ -22,8 +33,6 @@ export const VillaDetailModal = ({ villa, onClose, userVote, onVote, currentUser
   }, [villa]);
 
   if (!villa) return null;
-
-  const costPerPerson = getCostPerPerson(villa.priceTotal, 20, 2);
 
   const handleAddComment = (e) => {
     e.preventDefault();
@@ -61,7 +70,7 @@ export const VillaDetailModal = ({ villa, onClose, userVote, onVote, currentUser
           zIndex: 10
         }}>
           <h2 style={{ fontSize: '16px', fontWeight: '800', color: 'white' }}>
-            Chi Tiết Villa & Bình Chọn
+            {isFoodItem ? 'Chi Tiết Quán Ăn & Bình Chọn' : 'Chi Tiết Villa & Bình Chọn'}
           </h2>
           <button
             onClick={onClose}
@@ -87,11 +96,12 @@ export const VillaDetailModal = ({ villa, onClose, userVote, onVote, currentUser
           {/* Gallery Carousel */}
           <div>
             <div style={{ display: 'flex', gap: '8px', overflowX: 'auto', paddingBottom: '8px', snapType: 'x mandatory' }}>
-              {villa.images.map((img, idx) => (
+              {imagesList.map((img, idx) => (
                 <img
                   key={idx}
                   src={img}
                   alt={`${villa.name} ${idx + 1}`}
+                  onError={(e) => { e.target.src = FALLBACK_IMAGE; }}
                   style={{
                     width: '85%',
                     height: '220px',
@@ -112,42 +122,44 @@ export const VillaDetailModal = ({ villa, onClose, userVote, onVote, currentUser
             </h1>
             <div style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '12px', color: '#94a3b8', marginBottom: '10px' }}>
               <MapPin size={15} color="#38bdf8" />
-              <span>{villa.location}</span>
-              {villa.sourceUrl && (
+              <span>{villa.location || 'Vũng Tàu'}</span>
+              {(villa.sourceUrl || villa.mapsUrl) && (
                 <a
-                  href={villa.sourceUrl}
+                  href={villa.sourceUrl || villa.mapsUrl}
                   target="_blank"
                   rel="noreferrer"
                   style={{ color: '#38bdf8', fontWeight: 600, fontSize: '11px', marginLeft: 'auto', display: 'flex', alignItems: 'center', gap: '2px' }}
                 >
-                  Link Booking.com gốc <ExternalLink size={11} />
+                  {villa.sourceUrl ? 'Link Booking gốc' : 'Xem Google Maps'} <ExternalLink size={11} />
                 </a>
               )}
             </div>
 
-            {/* Price Box for 20 People */}
-            <div style={{
-              background: 'rgba(16, 185, 129, 0.1)',
-              border: '1px solid rgba(16, 185, 129, 0.3)',
-              borderRadius: '14px',
-              padding: '14px',
-              display: 'grid',
-              gridTemplateColumns: '1fr 1fr',
-              gap: '12px'
-            }}>
-              <div>
-                <div style={{ fontSize: '11px', color: '#94a3b8' }}>Chia đều đoàn 20 người (2 đêm)</div>
-                <div style={{ fontSize: '18px', fontWeight: '800', color: '#34d399' }}>
-                  ~{(costPerPerson / 1000).toLocaleString()}k <span style={{ fontSize: '11px', fontWeight: 500 }}>/ người</span>
+            {/* Price Box (If Villa) */}
+            {!isFoodItem && (
+              <div style={{
+                background: 'rgba(16, 185, 129, 0.1)',
+                border: '1px solid rgba(16, 185, 129, 0.3)',
+                borderRadius: '14px',
+                padding: '14px',
+                display: 'grid',
+                gridTemplateColumns: '1fr 1fr',
+                gap: '12px'
+              }}>
+                <div>
+                  <div style={{ fontSize: '11px', color: '#94a3b8' }}>Chia đều đoàn 20 người (2 đêm)</div>
+                  <div style={{ fontSize: '18px', fontWeight: '800', color: '#34d399' }}>
+                    ~{(costPerPerson / 1000).toLocaleString()}k <span style={{ fontSize: '11px', fontWeight: 500 }}>/ người</span>
+                  </div>
+                </div>
+                <div style={{ textAlign: 'right', borderLeft: '1px solid rgba(255,255,255,0.1)', paddingLeft: '12px' }}>
+                  <div style={{ fontSize: '11px', color: '#94a3b8' }}>Giá tổng nguyên căn</div>
+                  <div style={{ fontSize: '15px', fontWeight: '700', color: 'white' }}>
+                    {(villa.priceTotal / 1000000).toFixed(1)} triệu <span style={{ fontSize: '10px', color: '#94a3b8' }}>/ đêm</span>
+                  </div>
                 </div>
               </div>
-              <div style={{ textAlign: 'right', borderLeft: '1px solid rgba(255,255,255,0.1)', paddingLeft: '12px' }}>
-                <div style={{ fontSize: '11px', color: '#94a3b8' }}>Giá tổng nguyên căn</div>
-                <div style={{ fontSize: '15px', fontWeight: '700', color: 'white' }}>
-                  {(villa.priceTotal / 1000000).toFixed(1)} triệu <span style={{ fontSize: '10px', color: '#94a3b8' }}>/ đêm</span>
-                </div>
-              </div>
-            </div>
+            )}
           </div>
 
           {/* Voting Action Section */}
@@ -158,7 +170,7 @@ export const VillaDetailModal = ({ villa, onClose, userVote, onVote, currentUser
             padding: '14px'
           }}>
             <div style={{ fontSize: '12px', fontWeight: '800', color: 'white', marginBottom: '8px' }}>
-              🎯 Bình chọn ý kiến của bạn cho căn này:
+              🎯 Bình chọn ý kiến của bạn cho địa điểm này:
             </div>
             <div className="vote-bar">
               <button
@@ -182,46 +194,31 @@ export const VillaDetailModal = ({ villa, onClose, userVote, onVote, currentUser
             </div>
           </div>
 
-          {/* Specs Grid */}
-          <div style={{
-            display: 'grid',
-            gridTemplateColumns: '1fr 1fr 1fr',
-            gap: '8px',
-            background: 'rgba(15, 23, 42, 0.6)',
-            padding: '12px',
-            borderRadius: '14px',
-            border: '1px solid rgba(255,255,255,0.08)'
-          }}>
-            <div style={{ textAlign: 'center' }}>
-              <Users size={16} color="#38bdf8" style={{ margin: '0 auto 2px' }} />
-              <div style={{ fontSize: '12px', fontWeight: '700' }}>{villa.capacity} Khách</div>
-              <div style={{ fontSize: '10px', color: '#94a3b8' }}>Sức chứa thực tế</div>
-            </div>
-            <div style={{ textAlign: 'center', borderLeft: '1px solid rgba(255,255,255,0.08)', borderRight: '1px solid rgba(255,255,255,0.08)' }}>
-              <Bed size={16} color="#34d399" style={{ margin: '0 auto 2px' }} />
-              <div style={{ fontSize: '12px', fontWeight: '700' }}>{villa.bedrooms} Phòng ngủ</div>
-              <div style={{ fontSize: '10px', color: '#94a3b8' }}>Giường đôi</div>
-            </div>
-            <div style={{ textAlign: 'center' }}>
-              <Bath size={16} color="#a7f3d0" style={{ margin: '0 auto 2px' }} />
-              <div style={{ fontSize: '12px', fontWeight: '700' }}>{villa.bathrooms} WC</div>
-              <div style={{ fontSize: '10px', color: '#94a3b8' }}>Vệ sinh khép kín</div>
-            </div>
-          </div>
-
-          {/* Bedding Configuration */}
-          {villa.bedConfig && (
+          {/* Specs Grid (If Villa) */}
+          {!isFoodItem && (
             <div style={{
-              background: 'rgba(99, 102, 241, 0.1)',
-              border: '1px solid rgba(99, 102, 241, 0.3)',
+              display: 'grid',
+              gridTemplateColumns: '1fr 1fr 1fr',
+              gap: '8px',
+              background: 'rgba(15, 23, 42, 0.6)',
+              padding: '12px',
               borderRadius: '14px',
-              padding: '12px'
+              border: '1px solid rgba(255,255,255,0.08)'
             }}>
-              <h3 style={{ fontSize: '12px', fontWeight: '800', color: '#a5b4fc', marginBottom: '4px', display: 'flex', alignItems: 'center', gap: '6px' }}>
-                <Bed size={14} /> Cấu Hình Giường Ngủ Cho Đoàn 20 Người:
-              </h3>
-              <div style={{ fontSize: '12px', fontWeight: '700', color: 'white' }}>
-                {villa.bedConfig.summary}
+              <div style={{ textAlign: 'center' }}>
+                <Users size={16} color="#38bdf8" style={{ margin: '0 auto 2px' }} />
+                <div style={{ fontSize: '12px', fontWeight: '700' }}>{villa.capacity} Khách</div>
+                <div style={{ fontSize: '10px', color: '#94a3b8' }}>Sức chứa thực tế</div>
+              </div>
+              <div style={{ textAlign: 'center', borderLeft: '1px solid rgba(255,255,255,0.08)', borderRight: '1px solid rgba(255,255,255,0.08)' }}>
+                <Bed size={16} color="#34d399" style={{ margin: '0 auto 2px' }} />
+                <div style={{ fontSize: '12px', fontWeight: '700' }}>{villa.bedrooms} Phòng ngủ</div>
+                <div style={{ fontSize: '10px', color: '#94a3b8' }}>Giường đôi</div>
+              </div>
+              <div style={{ textAlign: 'center' }}>
+                <Bath size={16} color="#a7f3d0" style={{ margin: '0 auto 2px' }} />
+                <div style={{ fontSize: '12px', fontWeight: '700' }}>{villa.bathrooms} WC</div>
+                <div style={{ fontSize: '10px', color: '#94a3b8' }}>Vệ sinh khép kín</div>
               </div>
             </div>
           )}
@@ -234,7 +231,7 @@ export const VillaDetailModal = ({ villa, onClose, userVote, onVote, currentUser
 
             {comments.length === 0 ? (
               <div style={{ fontSize: '12px', color: '#94a3b8', fontStyle: 'italic', marginBottom: '12px' }}>
-                Chưa có bình luận nào. Hãy là người đầu tiên để lại ý kiến cho căn này!
+                Chưa có bình luận nào. Hãy là người đầu tiên để lại ý kiến!
               </div>
             ) : (
               <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', marginBottom: '12px' }}>
