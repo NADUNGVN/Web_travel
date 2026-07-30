@@ -3,7 +3,7 @@ import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import { getCleanVillaTitle } from './VillaCard';
 import { getCostPerPerson } from '../data/mockVillas';
-import { ChevronRight, X, Sparkles, Users, Bed, Bath } from 'lucide-react';
+import { ChevronRight, X, Sparkles } from 'lucide-react';
 
 export const MapView = ({ villas, foodPlaces = [], userVotes = {}, onOpenDetail }) => {
   const mapRef = useRef(null);
@@ -39,6 +39,15 @@ export const MapView = ({ villas, foodPlaces = [], userVotes = {}, onOpenDetail 
     };
   }, []);
 
+  // Invalidate Map size on layer change
+  useEffect(() => {
+    if (leafletMapRef.current) {
+      setTimeout(() => {
+        leafletMapRef.current.invalidateSize();
+      }, 100);
+    }
+  }, [activeLayer]);
+
   // Update Markers on Layer / Items change
   useEffect(() => {
     const map = leafletMapRef.current;
@@ -69,23 +78,23 @@ export const MapView = ({ villas, foodPlaces = [], userVotes = {}, onOpenDetail 
             color: white;
             padding: 6px;
             border-radius: 50%;
-            width: 32px;
-            height: 32px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+            width: 34px;
+            height: 34px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.5);
             border: 2px solid white;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 15px;
+            font-size: 16px;
             cursor: pointer;
-            transform: ${isSelected ? 'scale(1.25)' : 'scale(1)'};
+            transform: ${isSelected ? 'scale(1.3)' : 'scale(1)'};
             transition: transform 0.2s ease;
           ">
             <span>${iconEmoji}</span>
           </div>
         `,
-        iconSize: [32, 32],
-        iconAnchor: [16, 16]
+        iconSize: [34, 34],
+        iconAnchor: [17, 17]
       });
 
       const marker = L.marker([item.lat, item.lng], { icon: customIcon }).addTo(map);
@@ -156,7 +165,7 @@ export const MapView = ({ villas, foodPlaces = [], userVotes = {}, onOpenDetail 
         )}
       </div>
 
-      {/* Map View Area */}
+      {/* Map Canvas Container */}
       <div
         ref={mapRef}
         style={{
@@ -164,80 +173,81 @@ export const MapView = ({ villas, foodPlaces = [], userVotes = {}, onOpenDetail 
           borderRadius: '20px',
           overflow: 'hidden',
           border: '1px solid rgba(255,255,255,0.12)',
-          position: 'relative'
+          position: 'relative',
+          zIndex: 1
         }}
       />
 
-      {/* Floating Selected Card Drawer at Bottom */}
+      {/* High Z-Index Floating Preview Card Overlay (Never Overlapped by Map) */}
       {selectedItem && (
         <div style={{
           position: 'absolute',
-          bottom: '12px',
+          bottom: '16px',
           left: '12px',
           right: '12px',
-          zIndex: 1000,
-          background: 'rgba(15, 23, 42, 0.95)',
-          backdropFilter: 'blur(16px)',
-          border: '1px solid rgba(56, 189, 248, 0.4)',
-          borderRadius: '18px',
-          padding: '12px',
+          zIndex: 9999,
+          background: 'rgba(15, 23, 42, 0.96)',
+          backdropFilter: 'blur(20px)',
+          border: '1.5px solid #38bdf8',
+          borderRadius: '20px',
+          padding: '14px',
           display: 'flex',
           flexDirection: 'column',
-          gap: '8px',
-          boxShadow: '0 10px 30px rgba(0,0,0,0.6)'
+          gap: '10px',
+          boxShadow: '0 14px 40px rgba(0,0,0,0.8)',
+          pointerEvents: 'auto'
         }}>
-          {/* Close Floating Card */}
+          {/* Close Button */}
           <button
             onClick={() => setSelectedItem(null)}
             style={{
               position: 'absolute',
               top: '10px',
               right: '10px',
-              background: 'rgba(255,255,255,0.1)',
+              background: 'rgba(255,255,255,0.15)',
               border: 'none',
               color: 'white',
               borderRadius: '50%',
-              width: '24px',
-              height: '24px',
+              width: '26px',
+              height: '26px',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
-              cursor: 'pointer'
+              cursor: 'pointer',
+              zIndex: 10000
             }}
           >
-            <X size={14} />
+            <X size={15} />
           </button>
 
-          <div style={{ display: 'flex', gap: '10px' }}>
+          <div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
             {/* 1. Hình ảnh */}
             <img
               src={selectedItem.images ? selectedItem.images[0] : selectedItem.image}
               alt={selectedItem.name}
-              style={{ width: '80px', height: '80px', borderRadius: '12px', objectFit: 'cover' }}
+              style={{ width: '85px', height: '85px', borderRadius: '14px', objectFit: 'cover', flexShrink: 0 }}
             />
 
-            <div style={{ flex: 1, minWidth: 0, display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
-              <div>
-                <h4 style={{ fontSize: '13px', fontWeight: '800', color: 'white', lineHeight: 1.2, margin: '0 20px 4px 0', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
-                  {getCleanVillaTitle(selectedItem.name)}
-                </h4>
+            <div style={{ flex: 1, minWidth: 0, display: 'flex', flexDirection: 'column', gap: '4px' }}>
+              <h4 style={{ fontSize: '13.5px', fontWeight: '800', color: 'white', lineHeight: 1.2, margin: '0 24px 0 0', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+                {getCleanVillaTitle(selectedItem.name)}
+              </h4>
 
-                {/* 2. Tổng tiền nguyên căn -> Phần chia 1/người nhỏ ở góc cùng hàng */}
-                {selectedItem.priceTotal && (
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
-                    <div style={{ fontSize: '14px', fontWeight: '800', color: '#34d399' }}>
-                      {(selectedItem.priceTotal / 1000000).toFixed(1)} triệu <span style={{ fontSize: '10px', color: '#a7f3d0' }}>/đêm</span>
-                    </div>
-                    <div style={{ fontSize: '10px', color: '#94a3b8' }}>
-                      (~{Math.round(getCostPerPerson(selectedItem.priceTotal, 20, 2) / 1000)}k/người)
-                    </div>
+              {/* 2. Tổng tiền nguyên căn -> Phần chia 1/người nhỏ ở góc cùng hàng */}
+              {selectedItem.priceTotal && (
+                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline' }}>
+                  <div style={{ fontSize: '14px', fontWeight: '800', color: '#34d399' }}>
+                    {(selectedItem.priceTotal / 1000000).toFixed(1)} triệu <span style={{ fontSize: '10px', color: '#a7f3d0' }}>/đêm</span>
                   </div>
-                )}
-              </div>
+                  <div style={{ fontSize: '10px', fontWeight: '600', color: '#94a3b8' }}>
+                    (~{Math.round(getCostPerPerson(selectedItem.priceTotal, 20, 2) / 1000)}k/người)
+                  </div>
+                </div>
+              )}
 
               {/* 3. Thông tin Khách - PN - WC */}
               {selectedItem.capacity && (
-                <div style={{ fontSize: '10px', color: '#cbd5e1', display: 'flex', gap: '6px' }}>
+                <div style={{ fontSize: '10.5px', color: '#cbd5e1', display: 'flex', gap: '4px' }}>
                   <span>🟢 {selectedItem.capacity} Khách</span> •
                   <span>🛏️ {selectedItem.bedrooms} PN</span> •
                   <span>🚿 {selectedItem.bathrooms} WC</span>
@@ -248,8 +258,9 @@ export const MapView = ({ villas, foodPlaces = [], userVotes = {}, onOpenDetail 
 
           {/* 4. Điểm đặc biệt */}
           {selectedItem.highlights && selectedItem.highlights.length > 0 && (
-            <div style={{ fontSize: '10px', color: '#fbbf24', display: 'flex', alignItems: 'center', gap: '4px' }}>
-              <Sparkles size={11} /> {selectedItem.highlights[0]}
+            <div style={{ fontSize: '10.5px', color: '#fbbf24', display: 'flex', alignItems: 'center', gap: '4px', background: 'rgba(245, 158, 11, 0.1)', padding: '4px 8px', borderRadius: '8px' }}>
+              <Sparkles size={12} style={{ flexShrink: 0 }} />
+              <span style={{ whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{selectedItem.highlights[0]}</span>
             </div>
           )}
 
@@ -261,7 +272,7 @@ export const MapView = ({ villas, foodPlaces = [], userVotes = {}, onOpenDetail 
               background: 'linear-gradient(135deg, #38bdf8 0%, #0284c7 100%)',
               color: 'white',
               border: 'none',
-              padding: '8px',
+              padding: '9px',
               borderRadius: '12px',
               fontSize: '12px',
               fontWeight: 800,

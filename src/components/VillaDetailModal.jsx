@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import { X, MapPin, Bed, Bath, Users, ExternalLink, MessageSquare, Send } from 'lucide-react';
+import { X, MapPin, Bed, Bath, Users, ExternalLink, MessageSquare, Send, ChevronLeft, ChevronRight, Sparkles } from 'lucide-react';
 import { getCostPerPerson } from '../data/mockVillas';
 
 const FALLBACK_IMAGE = "https://images.unsplash.com/photo-1512915922686-57c11dde9b6b?auto=format&fit=crop&w=1000&q=80";
 
 export const VillaDetailModal = ({ villa, onClose, userVote, onVote, currentUser }) => {
+  const [activeImgIdx, setActiveImgIdx] = useState(0);
   const [comments, setComments] = useState([]);
   const [newComment, setNewComment] = useState('');
 
@@ -13,11 +14,10 @@ export const VillaDetailModal = ({ villa, onClose, userVote, onVote, currentUser
     ? villa.images
     : (villa?.image ? [villa.image] : [FALLBACK_IMAGE]);
 
-  // Safe price & specs calculation
   const isFoodItem = villa?.itemType === 'food' || !villa?.priceTotal;
   const costPerPerson = isFoodItem ? 0 : getCostPerPerson(villa.priceTotal, 20, 2);
+  const totalMillion = !isFoodItem && villa?.priceTotal ? (villa.priceTotal / 1000000).toFixed(1) : '0';
 
-  // Load real comments from local storage for this villa/food item
   useEffect(() => {
     if (!villa) return;
     const saved = localStorage.getItem(`trip_comments_${villa.id}`);
@@ -33,6 +33,14 @@ export const VillaDetailModal = ({ villa, onClose, userVote, onVote, currentUser
   }, [villa]);
 
   if (!villa) return null;
+
+  const handleNextImg = () => {
+    setActiveImgIdx((prev) => (prev + 1) % imagesList.length);
+  };
+
+  const handlePrevImg = () => {
+    setActiveImgIdx((prev) => (prev - 1 + imagesList.length) % imagesList.length);
+  };
 
   const handleAddComment = (e) => {
     e.preventDefault();
@@ -62,15 +70,15 @@ export const VillaDetailModal = ({ villa, onClose, userVote, onVote, currentUser
           top: 0,
           background: 'rgba(30, 41, 59, 0.95)',
           backdropFilter: 'blur(12px)',
-          padding: '16px',
+          padding: '14px 16px',
           borderBottom: '1px solid rgba(255,255,255,0.1)',
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'center',
           zIndex: 10
         }}>
-          <h2 style={{ fontSize: '16px', fontWeight: '800', color: 'white' }}>
-            {isFoodItem ? 'Chi Tiết Quán Ăn & Bình Chọn' : 'Chi Tiết Villa & Bình Chọn'}
+          <h2 style={{ fontSize: '15px', fontWeight: '800', color: 'white' }}>
+            {isFoodItem ? 'Chi Tiết Quán Ăn' : 'Chi Tiết Villa & Bộ Sưu Tập Ảnh'}
           </h2>
           <button
             onClick={onClose}
@@ -92,32 +100,115 @@ export const VillaDetailModal = ({ villa, onClose, userVote, onVote, currentUser
         </div>
 
         {/* Modal Body */}
-        <div style={{ padding: '16px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
-          {/* Gallery Carousel */}
-          <div>
-            <div style={{ display: 'flex', gap: '8px', overflowX: 'auto', paddingBottom: '8px', snapType: 'x mandatory' }}>
-              {imagesList.map((img, idx) => (
-                <img
-                  key={idx}
-                  src={img}
-                  alt={`${villa.name} ${idx + 1}`}
-                  onError={(e) => { e.target.src = FALLBACK_IMAGE; }}
-                  style={{
-                    width: '85%',
-                    height: '220px',
-                    objectFit: 'cover',
-                    borderRadius: '16px',
-                    flexShrink: 0,
-                    snapAlign: 'center'
-                  }}
-                />
-              ))}
+        <div style={{ padding: '16px', display: 'flex', flexDirection: 'column', gap: '14px' }}>
+          
+          {/* Main Interactive Gallery Viewer */}
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+            {/* Main Hero Photo View */}
+            <div style={{ position: 'relative', height: '240px', borderRadius: '16px', overflow: 'hidden', background: '#0f172a' }}>
+              <img
+                src={imagesList[activeImgIdx]}
+                alt={`${villa.name} ${activeImgIdx + 1}`}
+                onError={(e) => { e.target.src = FALLBACK_IMAGE; }}
+                style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+              />
+
+              {/* Photo Counter Badge */}
+              <div style={{
+                position: 'absolute',
+                top: '12px',
+                right: '12px',
+                background: 'rgba(15, 23, 42, 0.85)',
+                backdropFilter: 'blur(8px)',
+                border: '1px solid rgba(255,255,255,0.2)',
+                color: 'white',
+                padding: '4px 10px',
+                borderRadius: '99px',
+                fontSize: '11px',
+                fontWeight: 800,
+                boxShadow: '0 2px 8px rgba(0,0,0,0.5)'
+              }}>
+                📸 {activeImgIdx + 1} / {imagesList.length} ảnh
+              </div>
+
+              {/* Prev / Next Arrows */}
+              {imagesList.length > 1 && (
+                <>
+                  <button
+                    onClick={handlePrevImg}
+                    style={{
+                      position: 'absolute',
+                      left: '10px',
+                      top: '50%',
+                      transform: 'translateY(-50%)',
+                      background: 'rgba(15, 23, 42, 0.7)',
+                      border: '1px solid rgba(255,255,255,0.2)',
+                      color: 'white',
+                      width: '32px',
+                      height: '32px',
+                      borderRadius: '50%',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      cursor: 'pointer'
+                    }}
+                  >
+                    <ChevronLeft size={18} />
+                  </button>
+                  <button
+                    onClick={handleNextImg}
+                    style={{
+                      position: 'absolute',
+                      right: '10px',
+                      top: '50%',
+                      transform: 'translateY(-50%)',
+                      background: 'rgba(15, 23, 42, 0.7)',
+                      border: '1px solid rgba(255,255,255,0.2)',
+                      color: 'white',
+                      width: '32px',
+                      height: '32px',
+                      borderRadius: '50%',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      cursor: 'pointer'
+                    }}
+                  >
+                    <ChevronRight size={18} />
+                  </button>
+                </>
+              )}
             </div>
+
+            {/* Thumbnail Selection Bar */}
+            {imagesList.length > 1 && (
+              <div style={{ display: 'flex', gap: '6px', overflowX: 'auto', paddingBottom: '4px' }}>
+                {imagesList.map((img, idx) => (
+                  <img
+                    key={idx}
+                    src={img}
+                    alt={`Thumb ${idx + 1}`}
+                    onClick={() => setActiveImgIdx(idx)}
+                    onError={(e) => { e.target.src = FALLBACK_IMAGE; }}
+                    style={{
+                      width: '54px',
+                      height: '54px',
+                      borderRadius: '10px',
+                      objectFit: 'cover',
+                      cursor: 'pointer',
+                      border: activeImgIdx === idx ? '2px solid #38bdf8' : '2px solid transparent',
+                      opacity: activeImgIdx === idx ? 1 : 0.6,
+                      flexShrink: 0
+                    }}
+                  />
+                ))}
+              </div>
+            )}
           </div>
 
-          {/* Title & Location */}
+          {/* Title & Price Row */}
           <div>
-            <h1 style={{ fontSize: '18px', fontWeight: '800', marginBottom: '6px', lineHeight: 1.3 }}>
+            <h1 style={{ fontSize: '17px', fontWeight: '800', marginBottom: '6px', lineHeight: 1.3 }}>
               {villa.name}
             </h1>
             <div style={{ display: 'flex', alignItems: 'center', gap: '6px', fontSize: '12px', color: '#94a3b8', marginBottom: '10px' }}>
@@ -135,27 +226,27 @@ export const VillaDetailModal = ({ villa, onClose, userVote, onVote, currentUser
               )}
             </div>
 
-            {/* Price Box (If Villa) */}
+            {/* Price Row: Main Total Price + Small Cost per Person on Right */}
             {!isFoodItem && (
               <div style={{
-                background: 'rgba(16, 185, 129, 0.1)',
+                background: 'rgba(16, 185, 129, 0.12)',
                 border: '1px solid rgba(16, 185, 129, 0.3)',
                 borderRadius: '14px',
-                padding: '14px',
-                display: 'grid',
-                gridTemplateColumns: '1fr 1fr',
-                gap: '12px'
+                padding: '12px 14px',
+                display: 'flex',
+                justifyContent: 'space-between',
+                alignItems: 'baseline'
               }}>
                 <div>
-                  <div style={{ fontSize: '11px', color: '#94a3b8' }}>Chia đều đoàn 20 người (2 đêm)</div>
+                  <div style={{ fontSize: '10px', color: '#94a3b8' }}>Giá tổng nguyên căn</div>
                   <div style={{ fontSize: '18px', fontWeight: '800', color: '#34d399' }}>
-                    ~{(costPerPerson / 1000).toLocaleString()}k <span style={{ fontSize: '11px', fontWeight: 500 }}>/ người</span>
+                    {totalMillion} triệu <span style={{ fontSize: '11px', color: '#a7f3d0' }}>/đêm</span>
                   </div>
                 </div>
-                <div style={{ textAlign: 'right', borderLeft: '1px solid rgba(255,255,255,0.1)', paddingLeft: '12px' }}>
-                  <div style={{ fontSize: '11px', color: '#94a3b8' }}>Giá tổng nguyên căn</div>
-                  <div style={{ fontSize: '15px', fontWeight: '700', color: 'white' }}>
-                    {(villa.priceTotal / 1000000).toFixed(1)} triệu <span style={{ fontSize: '10px', color: '#94a3b8' }}>/ đêm</span>
+                <div style={{ textAlign: 'right' }}>
+                  <div style={{ fontSize: '10px', color: '#94a3b8' }}>Chia 20 người (2 đêm)</div>
+                  <div style={{ fontSize: '12px', fontWeight: '700', color: 'white' }}>
+                    ~{Math.round(costPerPerson / 1000)}k <span style={{ fontSize: '10px', color: '#94a3b8' }}>/người</span>
                   </div>
                 </div>
               </div>
@@ -167,7 +258,7 @@ export const VillaDetailModal = ({ villa, onClose, userVote, onVote, currentUser
             background: 'rgba(15, 23, 42, 0.8)',
             border: '1px solid rgba(255, 255, 255, 0.12)',
             borderRadius: '16px',
-            padding: '14px'
+            padding: '12px 14px'
           }}>
             <div style={{ fontSize: '12px', fontWeight: '800', color: 'white', marginBottom: '8px' }}>
               🎯 Bình chọn ý kiến của bạn cho địa điểm này:
@@ -218,8 +309,22 @@ export const VillaDetailModal = ({ villa, onClose, userVote, onVote, currentUser
               <div style={{ textAlign: 'center' }}>
                 <Bath size={16} color="#a7f3d0" style={{ margin: '0 auto 2px' }} />
                 <div style={{ fontSize: '12px', fontWeight: '700' }}>{villa.bathrooms} WC</div>
-                <div style={{ fontSize: '10px', color: '#94a3b8' }}>Vệ sinh khép kín</div>
+                <div style={{ fontSize: '10px', color: '#94a3b8' }}>Khép kín</div>
               </div>
+            </div>
+          )}
+
+          {/* Highlights */}
+          {villa.highlights && villa.highlights.length > 0 && (
+            <div style={{ background: 'rgba(245, 158, 11, 0.1)', border: '1px solid rgba(245, 158, 11, 0.3)', padding: '10px 12px', borderRadius: '12px' }}>
+              <div style={{ fontSize: '11px', fontWeight: '800', color: '#fbbf24', marginBottom: '4px', display: 'flex', alignItems: 'center', gap: '4px' }}>
+                <Sparkles size={13} /> Điểm Đặc Biệt Nổi Bật:
+              </div>
+              {villa.highlights.map((hl, i) => (
+                <div key={i} style={{ fontSize: '11px', color: '#fef08a', marginTop: '2px' }}>
+                  • {hl}
+                </div>
+              ))}
             </div>
           )}
 
