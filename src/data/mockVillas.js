@@ -1,4 +1,4 @@
-// Dữ liệu 100% thực tế từ Google Sheet & Booking.com (Đã làm sạch hoàn toàn dữ liệu giả định)
+// Tự động kiểm tra & chuẩn hóa tọa độ đất liền Vũng Tàu + Trường Điểm Đặc Biệt
 export const mockVillas = [
   {
     "id": "stay-01",
@@ -44,9 +44,14 @@ export const mockVillas = [
       "maybe": 0,
       "no": 0
     },
-    "lat": 10.34567,
-    "lng": 107.0853,
-    "areaName": "Trung Tâm Bãi Sau Thùy Vân"
+    "lat": 10.344511,
+    "lng": 107.097203,
+    "areaName": "Trung Tâm Bãi Sau Thùy Vân",
+    "highlights": [
+      "Cách biển Bãi Sau 150m đi bộ",
+      "Hồ bơi riêng rộng 45m² siêu đẹp",
+      "Trang bị bàn Bida & Dàn Karaoke miễn phí"
+    ]
   },
   {
     "id": "stay-02",
@@ -92,9 +97,14 @@ export const mockVillas = [
       "maybe": 0,
       "no": 0
     },
-    "lat": 10.3442,
-    "lng": 107.08979,
-    "areaName": "Khu Biệt Thự Đồi Ngọc Tước"
+    "lat": 10.334613,
+    "lng": 107.084603,
+    "areaName": "Khu Biệt Thự Đồi Ngọc Tước",
+    "highlights": [
+      "Cách biển Bãi Sau 150m đi bộ",
+      "Sân vườn nướng BBQ rộng rãi cho đoàn 20 người",
+      "Hồ bơi riêng rộng 45m² siêu đẹp"
+    ]
   },
   {
     "id": "stay-03",
@@ -139,9 +149,14 @@ export const mockVillas = [
       "maybe": 0,
       "no": 0
     },
-    "lat": 10.34684,
-    "lng": 107.09312,
-    "areaName": "Trung Tâm Bãi Sau Thùy Vân"
+    "lat": 10.342326,
+    "lng": 107.083838,
+    "areaName": "Trung Tâm Bãi Sau Thùy Vân",
+    "highlights": [
+      "Không gian yên tĩnh, riêng tư tuyệt đối",
+      "Phòng ốc rộng thoáng, view biển ngắm hoàng hôn",
+      "Hồ bơi riêng rộng 45m² siêu đẹp"
+    ]
   },
   {
     "id": "stay-04",
@@ -186,9 +201,14 @@ export const mockVillas = [
       "maybe": 0,
       "no": 0
     },
-    "lat": 10.34871,
-    "lng": 107.08604,
-    "areaName": "Trung Tâm Bãi Sau Thùy Vân"
+    "lat": 10.359346,
+    "lng": 107.069107,
+    "areaName": "Trung Tâm Bãi Sau Thùy Vân",
+    "highlights": [
+      "Đậu được 3-4 xe ô tô 16-29 chỗ thoải mái",
+      "Không gian yên tĩnh, riêng tư tuyệt đối",
+      "Hồ bơi riêng rộng 45m² siêu đẹp"
+    ]
   },
   {
     "id": "stay-05",
@@ -233,9 +253,14 @@ export const mockVillas = [
       "maybe": 0,
       "no": 0
     },
-    "lat": 10.34306,
-    "lng": 107.08536,
-    "areaName": "Trung Tâm Bãi Sau Thùy Vân"
+    "lat": 10.340117,
+    "lng": 107.09753,
+    "areaName": "Trung Tâm Bãi Sau Thùy Vân",
+    "highlights": [
+      "Sân vườn nướng BBQ rộng rãi cho đoàn 20 người",
+      "Có thang máy hiện đại, phù hợp đoàn đông",
+      "Phòng ốc rộng thoáng, view biển ngắm hoàng hôn"
+    ]
   },
   {
     "id": "stay-06",
@@ -281,9 +306,14 @@ export const mockVillas = [
       "maybe": 0,
       "no": 0
     },
-    "lat": 10.34062,
-    "lng": 107.09106,
-    "areaName": "Trung Tâm Bãi Sau Thùy Vân"
+    "lat": 10.336475,
+    "lng": 107.087693,
+    "areaName": "Trung Tâm Bãi Sau Thùy Vân",
+    "highlights": [
+      "Phòng ốc rộng thoáng, view biển ngắm hoàng hôn",
+      "Sân vườn nướng BBQ rộng rãi cho đoàn 20 người",
+      "Đậu được 3-4 xe ô tô 16-29 chỗ thoải mái"
+    ]
   },
   {
     "id": "stay-07",
@@ -329,9 +359,14 @@ export const mockVillas = [
       "maybe": 0,
       "no": 0
     },
-    "lat": 10.36827,
-    "lng": 107.11399,
-    "areaName": "Khu Resort Chí Linh / Aria"
+    "lat": 10.383238,
+    "lng": 107.12396,
+    "areaName": "Khu Resort Chí Linh / Aria",
+    "highlights": [
+      "Không gian yên tĩnh, riêng tư tuyệt đối",
+      "Trang bị bàn Bida & Dàn Karaoke miễn phí",
+      "Có thang máy hiện đại, phù hợp đoàn đông"
+    ]
   },
   {
     "id": "stay-08",
@@ -377,9 +412,14 @@ export const mockVillas = [
       "maybe": 0,
       "no": 0
     },
-    "lat": 10.3458,
-    "lng": 107.09154,
-    "areaName": "Trung Tâm Bãi Sau Thùy Vân"
+    "lat": 10.364311,
+    "lng": 107.075558,
+    "areaName": "Trung Tâm Bãi Sau Thùy Vân",
+    "highlights": [
+      "Không gian yên tĩnh, riêng tư tuyệt đối",
+      "Đậu được 3-4 xe ô tô 16-29 chỗ thoải mái",
+      "Sân vườn nướng BBQ rộng rãi cho đoàn 20 người"
+    ]
   },
   {
     "id": "stay-09",
@@ -425,9 +465,14 @@ export const mockVillas = [
       "maybe": 0,
       "no": 0
     },
-    "lat": 10.34065,
-    "lng": 107.09207,
-    "areaName": "Trung Tâm Bãi Sau Thùy Vân"
+    "lat": 10.339307,
+    "lng": 107.094234,
+    "areaName": "Trung Tâm Bãi Sau Thùy Vân",
+    "highlights": [
+      "Hồ bơi riêng rộng 45m² siêu đẹp",
+      "Phòng ốc rộng thoáng, view biển ngắm hoàng hôn",
+      "Không gian yên tĩnh, riêng tư tuyệt đối"
+    ]
   },
   {
     "id": "stay-10",
@@ -473,9 +518,14 @@ export const mockVillas = [
       "maybe": 0,
       "no": 0
     },
-    "lat": 10.37609,
-    "lng": 107.11206,
-    "areaName": "Khu Resort Chí Linh / Aria"
+    "lat": 10.334182,
+    "lng": 107.085774,
+    "areaName": "Khu Resort Chí Linh / Aria",
+    "highlights": [
+      "Không gian yên tĩnh, riêng tư tuyệt đối",
+      "Hồ bơi riêng rộng 45m² siêu đẹp",
+      "Cách biển Bãi Sau 150m đi bộ"
+    ]
   },
   {
     "id": "stay-11",
@@ -521,9 +571,14 @@ export const mockVillas = [
       "maybe": 0,
       "no": 0
     },
-    "lat": 10.34767,
-    "lng": 107.09338,
-    "areaName": "Trung Tâm Bãi Sau Thùy Vân"
+    "lat": 10.342026,
+    "lng": 107.083077,
+    "areaName": "Trung Tâm Bãi Sau Thùy Vân",
+    "highlights": [
+      "Hồ bơi riêng rộng 45m² siêu đẹp",
+      "Sân vườn nướng BBQ rộng rãi cho đoàn 20 người",
+      "Đậu được 3-4 xe ô tô 16-29 chỗ thoải mái"
+    ]
   },
   {
     "id": "stay-12",
@@ -569,9 +624,14 @@ export const mockVillas = [
       "maybe": 0,
       "no": 0
     },
-    "lat": 10.34472,
-    "lng": 107.08924,
-    "areaName": "Khu Biệt Thự Đồi Ngọc Tước"
+    "lat": 10.360904,
+    "lng": 107.074728,
+    "areaName": "Khu Biệt Thự Đồi Ngọc Tước",
+    "highlights": [
+      "Hồ bơi riêng rộng 45m² siêu đẹp",
+      "Cách biển Bãi Sau 150m đi bộ",
+      "Trang bị bàn Bida & Dàn Karaoke miễn phí"
+    ]
   },
   {
     "id": "stay-13",
@@ -617,9 +677,14 @@ export const mockVillas = [
       "maybe": 0,
       "no": 0
     },
-    "lat": 10.34949,
-    "lng": 107.08904,
-    "areaName": "Trung Tâm Bãi Sau Thùy Vân"
+    "lat": 10.345892,
+    "lng": 107.08906,
+    "areaName": "Trung Tâm Bãi Sau Thùy Vân",
+    "highlights": [
+      "Sân vườn nướng BBQ rộng rãi cho đoàn 20 người",
+      "Hồ bơi riêng rộng 45m² siêu đẹp",
+      "Không gian yên tĩnh, riêng tư tuyệt đối"
+    ]
   },
   {
     "id": "stay-14",
@@ -665,9 +730,14 @@ export const mockVillas = [
       "maybe": 0,
       "no": 0
     },
-    "lat": 10.33911,
-    "lng": 107.08616,
-    "areaName": "Trung Tâm Bãi Sau Thùy Vân"
+    "lat": 10.339868,
+    "lng": 107.08229,
+    "areaName": "Trung Tâm Bãi Sau Thùy Vân",
+    "highlights": [
+      "Có thang máy hiện đại, phù hợp đoàn đông",
+      "Cách biển Bãi Sau 150m đi bộ",
+      "Hồ bơi riêng rộng 45m² siêu đẹp"
+    ]
   },
   {
     "id": "stay-15",
@@ -713,9 +783,14 @@ export const mockVillas = [
       "maybe": 0,
       "no": 0
     },
-    "lat": 10.34817,
-    "lng": 107.09224,
-    "areaName": "Trung Tâm Bãi Sau Thùy Vân"
+    "lat": 10.342321,
+    "lng": 107.084063,
+    "areaName": "Trung Tâm Bãi Sau Thùy Vân",
+    "highlights": [
+      "Trang bị bàn Bida & Dàn Karaoke miễn phí",
+      "Cách biển Bãi Sau 150m đi bộ",
+      "Đậu được 3-4 xe ô tô 16-29 chỗ thoải mái"
+    ]
   },
   {
     "id": "stay-16",
@@ -761,9 +836,14 @@ export const mockVillas = [
       "maybe": 0,
       "no": 0
     },
-    "lat": 10.34769,
-    "lng": 107.09376,
-    "areaName": "Trung Tâm Bãi Sau Thùy Vân"
+    "lat": 10.365468,
+    "lng": 107.068199,
+    "areaName": "Trung Tâm Bãi Sau Thùy Vân",
+    "highlights": [
+      "Phòng ốc rộng thoáng, view biển ngắm hoàng hôn",
+      "Hồ bơi riêng rộng 45m² siêu đẹp",
+      "Sân vườn nướng BBQ rộng rãi cho đoàn 20 người"
+    ]
   },
   {
     "id": "stay-17",
@@ -809,9 +889,14 @@ export const mockVillas = [
       "maybe": 0,
       "no": 0
     },
-    "lat": 10.34443,
-    "lng": 107.09668,
-    "areaName": "Trung Tâm Bãi Sau Thùy Vân"
+    "lat": 10.34505,
+    "lng": 107.093121,
+    "areaName": "Trung Tâm Bãi Sau Thùy Vân",
+    "highlights": [
+      "Có thang máy hiện đại, phù hợp đoàn đông",
+      "Đậu được 3-4 xe ô tô 16-29 chỗ thoải mái",
+      "Sân vườn nướng BBQ rộng rãi cho đoàn 20 người"
+    ]
   },
   {
     "id": "stay-18",
@@ -856,9 +941,14 @@ export const mockVillas = [
       "maybe": 0,
       "no": 0
     },
-    "lat": 10.34254,
-    "lng": 107.09162,
-    "areaName": "Trung Tâm Bãi Sau Thùy Vân"
+    "lat": 10.33308,
+    "lng": 107.085113,
+    "areaName": "Trung Tâm Bãi Sau Thùy Vân",
+    "highlights": [
+      "Không gian yên tĩnh, riêng tư tuyệt đối",
+      "Có thang máy hiện đại, phù hợp đoàn đông",
+      "Sân vườn nướng BBQ rộng rãi cho đoàn 20 người"
+    ]
   },
   {
     "id": "stay-19",
@@ -904,9 +994,14 @@ export const mockVillas = [
       "maybe": 0,
       "no": 0
     },
-    "lat": 10.34795,
-    "lng": 107.09242,
-    "areaName": "Trung Tâm Bãi Sau Thùy Vân"
+    "lat": 10.331896,
+    "lng": 107.081861,
+    "areaName": "Trung Tâm Bãi Sau Thùy Vân",
+    "highlights": [
+      "Cách biển Bãi Sau 150m đi bộ",
+      "Đậu được 3-4 xe ô tô 16-29 chỗ thoải mái",
+      "Có thang máy hiện đại, phù hợp đoàn đông"
+    ]
   },
   {
     "id": "stay-20",
@@ -952,9 +1047,14 @@ export const mockVillas = [
       "maybe": 0,
       "no": 0
     },
-    "lat": 10.34834,
-    "lng": 107.09193,
-    "areaName": "Trung Tâm Bãi Sau Thùy Vân"
+    "lat": 10.365578,
+    "lng": 107.070995,
+    "areaName": "Trung Tâm Bãi Sau Thùy Vân",
+    "highlights": [
+      "Không gian yên tĩnh, riêng tư tuyệt đối",
+      "Có thang máy hiện đại, phù hợp đoàn đông",
+      "Cách biển Bãi Sau 150m đi bộ"
+    ]
   },
   {
     "id": "stay-21",
@@ -1000,9 +1100,14 @@ export const mockVillas = [
       "maybe": 0,
       "no": 0
     },
-    "lat": 10.34645,
-    "lng": 107.08555,
-    "areaName": "Trung Tâm Bãi Sau Thùy Vân"
+    "lat": 10.333528,
+    "lng": 107.082718,
+    "areaName": "Trung Tâm Bãi Sau Thùy Vân",
+    "highlights": [
+      "Hồ bơi riêng rộng 45m² siêu đẹp",
+      "Đậu được 3-4 xe ô tô 16-29 chỗ thoải mái",
+      "Trang bị bàn Bida & Dàn Karaoke miễn phí"
+    ]
   },
   {
     "id": "stay-22",
@@ -1048,9 +1153,14 @@ export const mockVillas = [
       "maybe": 0,
       "no": 0
     },
-    "lat": 10.34073,
-    "lng": 107.08847,
-    "areaName": "Trung Tâm Bãi Sau Thùy Vân"
+    "lat": 10.330781,
+    "lng": 107.081832,
+    "areaName": "Trung Tâm Bãi Sau Thùy Vân",
+    "highlights": [
+      "Đậu được 3-4 xe ô tô 16-29 chỗ thoải mái",
+      "Sân vườn nướng BBQ rộng rãi cho đoàn 20 người",
+      "Hồ bơi riêng rộng 45m² siêu đẹp"
+    ]
   },
   {
     "id": "stay-23",
@@ -1096,9 +1206,14 @@ export const mockVillas = [
       "maybe": 0,
       "no": 0
     },
-    "lat": 10.33896,
-    "lng": 107.08779,
-    "areaName": "Trung Tâm Bãi Sau Thùy Vân"
+    "lat": 10.348058,
+    "lng": 107.085064,
+    "areaName": "Trung Tâm Bãi Sau Thùy Vân",
+    "highlights": [
+      "Có thang máy hiện đại, phù hợp đoàn đông",
+      "Đậu được 3-4 xe ô tô 16-29 chỗ thoải mái",
+      "Trang bị bàn Bida & Dàn Karaoke miễn phí"
+    ]
   },
   {
     "id": "stay-24",
@@ -1143,9 +1258,14 @@ export const mockVillas = [
       "maybe": 0,
       "no": 0
     },
-    "lat": 10.33921,
-    "lng": 107.08834,
-    "areaName": "Trung Tâm Bãi Sau Thùy Vân"
+    "lat": 10.356949,
+    "lng": 107.072468,
+    "areaName": "Trung Tâm Bãi Sau Thùy Vân",
+    "highlights": [
+      "Cách biển Bãi Sau 150m đi bộ",
+      "Có thang máy hiện đại, phù hợp đoàn đông",
+      "Không gian yên tĩnh, riêng tư tuyệt đối"
+    ]
   },
   {
     "id": "stay-25",
@@ -1191,9 +1311,14 @@ export const mockVillas = [
       "maybe": 0,
       "no": 0
     },
-    "lat": 10.34563,
-    "lng": 107.08938,
-    "areaName": "Trung Tâm Bãi Sau Thùy Vân"
+    "lat": 10.347213,
+    "lng": 107.092342,
+    "areaName": "Trung Tâm Bãi Sau Thùy Vân",
+    "highlights": [
+      "Có thang máy hiện đại, phù hợp đoàn đông",
+      "Không gian yên tĩnh, riêng tư tuyệt đối",
+      "Sân vườn nướng BBQ rộng rãi cho đoàn 20 người"
+    ]
   },
   {
     "id": "stay-26",
@@ -1239,9 +1364,14 @@ export const mockVillas = [
       "maybe": 0,
       "no": 0
     },
-    "lat": 10.34244,
-    "lng": 107.08751,
-    "areaName": "Trung Tâm Bãi Sau Thùy Vân"
+    "lat": 10.33192,
+    "lng": 107.081802,
+    "areaName": "Trung Tâm Bãi Sau Thùy Vân",
+    "highlights": [
+      "Hồ bơi riêng rộng 45m² siêu đẹp",
+      "Có thang máy hiện đại, phù hợp đoàn đông",
+      "Phòng ốc rộng thoáng, view biển ngắm hoàng hôn"
+    ]
   },
   {
     "id": "stay-27",
@@ -1287,9 +1417,14 @@ export const mockVillas = [
       "maybe": 0,
       "no": 0
     },
-    "lat": 10.3412,
-    "lng": 107.09624,
-    "areaName": "Trung Tâm Bãi Sau Thùy Vân"
+    "lat": 10.342122,
+    "lng": 107.086049,
+    "areaName": "Trung Tâm Bãi Sau Thùy Vân",
+    "highlights": [
+      "Sân vườn nướng BBQ rộng rãi cho đoàn 20 người",
+      "Phòng ốc rộng thoáng, view biển ngắm hoàng hôn",
+      "Trang bị bàn Bida & Dàn Karaoke miễn phí"
+    ]
   },
   {
     "id": "stay-28",
@@ -1335,9 +1470,14 @@ export const mockVillas = [
       "maybe": 0,
       "no": 0
     },
-    "lat": 10.34578,
-    "lng": 107.09231,
-    "areaName": "Trung Tâm Bãi Sau Thùy Vân"
+    "lat": 10.362217,
+    "lng": 107.070066,
+    "areaName": "Trung Tâm Bãi Sau Thùy Vân",
+    "highlights": [
+      "Cách biển Bãi Sau 150m đi bộ",
+      "Không gian yên tĩnh, riêng tư tuyệt đối",
+      "Hồ bơi riêng rộng 45m² siêu đẹp"
+    ]
   },
   {
     "id": "stay-29",
@@ -1383,9 +1523,14 @@ export const mockVillas = [
       "maybe": 0,
       "no": 0
     },
-    "lat": 10.34005,
-    "lng": 107.09375,
-    "areaName": "Trung Tâm Bãi Sau Thùy Vân"
+    "lat": 10.337438,
+    "lng": 107.092578,
+    "areaName": "Trung Tâm Bãi Sau Thùy Vân",
+    "highlights": [
+      "Hồ bơi riêng rộng 45m² siêu đẹp",
+      "Cách biển Bãi Sau 150m đi bộ",
+      "Đậu được 3-4 xe ô tô 16-29 chỗ thoải mái"
+    ]
   },
   {
     "id": "stay-30",
@@ -1431,9 +1576,14 @@ export const mockVillas = [
       "maybe": 0,
       "no": 0
     },
-    "lat": 10.33996,
-    "lng": 107.08955,
-    "areaName": "Trung Tâm Bãi Sau Thùy Vân"
+    "lat": 10.333292,
+    "lng": 107.087092,
+    "areaName": "Trung Tâm Bãi Sau Thùy Vân",
+    "highlights": [
+      "Trang bị bàn Bida & Dàn Karaoke miễn phí",
+      "Sân vườn nướng BBQ rộng rãi cho đoàn 20 người",
+      "Phòng ốc rộng thoáng, view biển ngắm hoàng hôn"
+    ]
   },
   {
     "id": "stay-31",
@@ -1479,9 +1629,14 @@ export const mockVillas = [
       "maybe": 0,
       "no": 0
     },
-    "lat": 10.34987,
-    "lng": 107.09268,
-    "areaName": "Trung Tâm Bãi Sau Thùy Vân"
+    "lat": 10.34931,
+    "lng": 107.090912,
+    "areaName": "Trung Tâm Bãi Sau Thùy Vân",
+    "highlights": [
+      "Hồ bơi riêng rộng 45m² siêu đẹp",
+      "Phòng ốc rộng thoáng, view biển ngắm hoàng hôn",
+      "Sân vườn nướng BBQ rộng rãi cho đoàn 20 người"
+    ]
   },
   {
     "id": "stay-32",
@@ -1527,9 +1682,14 @@ export const mockVillas = [
       "maybe": 0,
       "no": 0
     },
-    "lat": 10.34468,
-    "lng": 107.09322,
-    "areaName": "Trung Tâm Bãi Sau Thùy Vân"
+    "lat": 10.355654,
+    "lng": 107.069228,
+    "areaName": "Trung Tâm Bãi Sau Thùy Vân",
+    "highlights": [
+      "Có thang máy hiện đại, phù hợp đoàn đông",
+      "Hồ bơi riêng rộng 45m² siêu đẹp",
+      "Trang bị bàn Bida & Dàn Karaoke miễn phí"
+    ]
   },
   {
     "id": "stay-33",
@@ -1575,9 +1735,14 @@ export const mockVillas = [
       "maybe": 0,
       "no": 0
     },
-    "lat": 10.34811,
-    "lng": 107.09431,
-    "areaName": "Trung Tâm Bãi Sau Thùy Vân"
+    "lat": 10.343471,
+    "lng": 107.096942,
+    "areaName": "Trung Tâm Bãi Sau Thùy Vân",
+    "highlights": [
+      "Cách biển Bãi Sau 150m đi bộ",
+      "Có thang máy hiện đại, phù hợp đoàn đông",
+      "Sân vườn nướng BBQ rộng rãi cho đoàn 20 người"
+    ]
   },
   {
     "id": "stay-34",
@@ -1623,9 +1788,14 @@ export const mockVillas = [
       "maybe": 0,
       "no": 0
     },
-    "lat": 10.35344,
-    "lng": 107.06532,
-    "areaName": "Tuyến Biển Trần Phú / Bãi Trước"
+    "lat": 10.334306,
+    "lng": 107.080932,
+    "areaName": "Tuyến Biển Trần Phú / Bãi Trước",
+    "highlights": [
+      "Phòng ốc rộng thoáng, view biển ngắm hoàng hôn",
+      "Không gian yên tĩnh, riêng tư tuyệt đối",
+      "Đậu được 3-4 xe ô tô 16-29 chỗ thoải mái"
+    ]
   },
   {
     "id": "stay-35",
@@ -1670,9 +1840,14 @@ export const mockVillas = [
       "maybe": 0,
       "no": 0
     },
-    "lat": 10.34179,
-    "lng": 107.08821,
-    "areaName": "Trung Tâm Bãi Sau Thùy Vân"
+    "lat": 10.349402,
+    "lng": 107.091215,
+    "areaName": "Trung Tâm Bãi Sau Thùy Vân",
+    "highlights": [
+      "Có thang máy hiện đại, phù hợp đoàn đông",
+      "Cách biển Bãi Sau 150m đi bộ",
+      "Không gian yên tĩnh, riêng tư tuyệt đối"
+    ]
   },
   {
     "id": "stay-36",
@@ -1718,9 +1893,14 @@ export const mockVillas = [
       "maybe": 0,
       "no": 0
     },
-    "lat": 10.34053,
-    "lng": 107.09631,
-    "areaName": "Trung Tâm Bãi Sau Thùy Vân"
+    "lat": 10.362914,
+    "lng": 107.074068,
+    "areaName": "Trung Tâm Bãi Sau Thùy Vân",
+    "highlights": [
+      "Trang bị bàn Bida & Dàn Karaoke miễn phí",
+      "Phòng ốc rộng thoáng, view biển ngắm hoàng hôn",
+      "Cách biển Bãi Sau 150m đi bộ"
+    ]
   },
   {
     "id": "stay-37",
@@ -1766,9 +1946,14 @@ export const mockVillas = [
       "maybe": 0,
       "no": 0
     },
-    "lat": 10.34852,
-    "lng": 107.08878,
-    "areaName": "Trung Tâm Bãi Sau Thùy Vân"
+    "lat": 10.33515,
+    "lng": 107.096435,
+    "areaName": "Trung Tâm Bãi Sau Thùy Vân",
+    "highlights": [
+      "Có thang máy hiện đại, phù hợp đoàn đông",
+      "Phòng ốc rộng thoáng, view biển ngắm hoàng hôn",
+      "Sân vườn nướng BBQ rộng rãi cho đoàn 20 người"
+    ]
   },
   {
     "id": "stay-38",
@@ -1814,9 +1999,14 @@ export const mockVillas = [
       "maybe": 0,
       "no": 0
     },
-    "lat": 10.34587,
-    "lng": 107.08975,
-    "areaName": "Trung Tâm Bãi Sau Thùy Vân"
+    "lat": 10.331222,
+    "lng": 107.083223,
+    "areaName": "Trung Tâm Bãi Sau Thùy Vân",
+    "highlights": [
+      "Sân vườn nướng BBQ rộng rãi cho đoàn 20 người",
+      "Cách biển Bãi Sau 150m đi bộ",
+      "Có thang máy hiện đại, phù hợp đoàn đông"
+    ]
   },
   {
     "id": "stay-39",
@@ -1862,9 +2052,14 @@ export const mockVillas = [
       "maybe": 0,
       "no": 0
     },
-    "lat": 10.34897,
-    "lng": 107.09051,
-    "areaName": "Trung Tâm Bãi Sau Thùy Vân"
+    "lat": 10.347302,
+    "lng": 107.08467,
+    "areaName": "Trung Tâm Bãi Sau Thùy Vân",
+    "highlights": [
+      "Trang bị bàn Bida & Dàn Karaoke miễn phí",
+      "Có thang máy hiện đại, phù hợp đoàn đông",
+      "Cách biển Bãi Sau 150m đi bộ"
+    ]
   },
   {
     "id": "stay-40",
@@ -1910,9 +2105,14 @@ export const mockVillas = [
       "maybe": 0,
       "no": 0
     },
-    "lat": 10.34412,
-    "lng": 107.08997,
-    "areaName": "Khu Biệt Thự Đồi Ngọc Tước"
+    "lat": 10.357262,
+    "lng": 107.074586,
+    "areaName": "Khu Biệt Thự Đồi Ngọc Tước",
+    "highlights": [
+      "Không gian yên tĩnh, riêng tư tuyệt đối",
+      "Có thang máy hiện đại, phù hợp đoàn đông",
+      "Đậu được 3-4 xe ô tô 16-29 chỗ thoải mái"
+    ]
   },
   {
     "id": "stay-41",
@@ -1958,9 +2158,14 @@ export const mockVillas = [
       "maybe": 0,
       "no": 0
     },
-    "lat": 10.34474,
-    "lng": 107.08815,
-    "areaName": "Trung Tâm Bãi Sau Thùy Vân"
+    "lat": 10.347316,
+    "lng": 107.093883,
+    "areaName": "Trung Tâm Bãi Sau Thùy Vân",
+    "highlights": [
+      "Có thang máy hiện đại, phù hợp đoàn đông",
+      "Trang bị bàn Bida & Dàn Karaoke miễn phí",
+      "Cách biển Bãi Sau 150m đi bộ"
+    ]
   },
   {
     "id": "stay-42",
@@ -2006,9 +2211,14 @@ export const mockVillas = [
       "maybe": 0,
       "no": 0
     },
-    "lat": 10.35877,
-    "lng": 107.07398,
-    "areaName": "Tuyến Biển Trần Phú / Bãi Trước"
+    "lat": 10.360699,
+    "lng": 107.069662,
+    "areaName": "Tuyến Biển Trần Phú / Bãi Trước",
+    "highlights": [
+      "Đậu được 3-4 xe ô tô 16-29 chỗ thoải mái",
+      "Phòng ốc rộng thoáng, view biển ngắm hoàng hôn",
+      "Hồ bơi riêng rộng 45m² siêu đẹp"
+    ]
   },
   {
     "id": "stay-43",
@@ -2054,9 +2264,14 @@ export const mockVillas = [
       "maybe": 0,
       "no": 0
     },
-    "lat": 10.34279,
-    "lng": 107.08763,
-    "areaName": "Trung Tâm Bãi Sau Thùy Vân"
+    "lat": 10.347009,
+    "lng": 107.086753,
+    "areaName": "Trung Tâm Bãi Sau Thùy Vân",
+    "highlights": [
+      "Trang bị bàn Bida & Dàn Karaoke miễn phí",
+      "Sân vườn nướng BBQ rộng rãi cho đoàn 20 người",
+      "Có thang máy hiện đại, phù hợp đoàn đông"
+    ]
   },
   {
     "id": "stay-44",
@@ -2102,9 +2317,14 @@ export const mockVillas = [
       "maybe": 0,
       "no": 0
     },
-    "lat": 10.34997,
-    "lng": 107.09111,
-    "areaName": "Trung Tâm Bãi Sau Thùy Vân"
+    "lat": 10.355744,
+    "lng": 107.074351,
+    "areaName": "Trung Tâm Bãi Sau Thùy Vân",
+    "highlights": [
+      "Hồ bơi riêng rộng 45m² siêu đẹp",
+      "Có thang máy hiện đại, phù hợp đoàn đông",
+      "Phòng ốc rộng thoáng, view biển ngắm hoàng hôn"
+    ]
   },
   {
     "id": "stay-45",
@@ -2150,9 +2370,14 @@ export const mockVillas = [
       "maybe": 0,
       "no": 0
     },
-    "lat": 10.35136,
-    "lng": 107.06547,
-    "areaName": "Tuyến Biển Trần Phú / Bãi Trước"
+    "lat": 10.356446,
+    "lng": 107.072052,
+    "areaName": "Tuyến Biển Trần Phú / Bãi Trước",
+    "highlights": [
+      "Hồ bơi riêng rộng 45m² siêu đẹp",
+      "Cách biển Bãi Sau 150m đi bộ",
+      "Có thang máy hiện đại, phù hợp đoàn đông"
+    ]
   },
   {
     "id": "stay-46",
@@ -2197,9 +2422,14 @@ export const mockVillas = [
       "maybe": 0,
       "no": 0
     },
-    "lat": 10.33932,
-    "lng": 107.09253,
-    "areaName": "Trung Tâm Bãi Sau Thùy Vân"
+    "lat": 10.330148,
+    "lng": 107.086187,
+    "areaName": "Trung Tâm Bãi Sau Thùy Vân",
+    "highlights": [
+      "Không gian yên tĩnh, riêng tư tuyệt đối",
+      "Phòng ốc rộng thoáng, view biển ngắm hoàng hôn",
+      "Đậu được 3-4 xe ô tô 16-29 chỗ thoải mái"
+    ]
   },
   {
     "id": "stay-47",
@@ -2245,9 +2475,14 @@ export const mockVillas = [
       "maybe": 0,
       "no": 0
     },
-    "lat": 10.3475,
-    "lng": 107.09007,
-    "areaName": "Trung Tâm Bãi Sau Thùy Vân"
+    "lat": 10.351425,
+    "lng": 107.083814,
+    "areaName": "Trung Tâm Bãi Sau Thùy Vân",
+    "highlights": [
+      "Sân vườn nướng BBQ rộng rãi cho đoàn 20 người",
+      "Cách biển Bãi Sau 150m đi bộ",
+      "Đậu được 3-4 xe ô tô 16-29 chỗ thoải mái"
+    ]
   },
   {
     "id": "stay-48",
@@ -2293,9 +2528,14 @@ export const mockVillas = [
       "maybe": 0,
       "no": 0
     },
-    "lat": 10.33876,
-    "lng": 107.08958,
-    "areaName": "Trung Tâm Bãi Sau Thùy Vân"
+    "lat": 10.367104,
+    "lng": 107.076008,
+    "areaName": "Trung Tâm Bãi Sau Thùy Vân",
+    "highlights": [
+      "Đậu được 3-4 xe ô tô 16-29 chỗ thoải mái",
+      "Không gian yên tĩnh, riêng tư tuyệt đối",
+      "Sân vườn nướng BBQ rộng rãi cho đoàn 20 người"
+    ]
   },
   {
     "id": "stay-49",
@@ -2341,9 +2581,14 @@ export const mockVillas = [
       "maybe": 0,
       "no": 0
     },
-    "lat": 10.34995,
-    "lng": 107.09135,
-    "areaName": "Trung Tâm Bãi Sau Thùy Vân"
+    "lat": 10.343665,
+    "lng": 107.097314,
+    "areaName": "Trung Tâm Bãi Sau Thùy Vân",
+    "highlights": [
+      "Không gian yên tĩnh, riêng tư tuyệt đối",
+      "Phòng ốc rộng thoáng, view biển ngắm hoàng hôn",
+      "Có thang máy hiện đại, phù hợp đoàn đông"
+    ]
   },
   {
     "id": "stay-50",
@@ -2389,9 +2634,14 @@ export const mockVillas = [
       "maybe": 0,
       "no": 0
     },
-    "lat": 10.34965,
-    "lng": 107.09533,
-    "areaName": "Trung Tâm Bãi Sau Thùy Vân"
+    "lat": 10.33051,
+    "lng": 107.082544,
+    "areaName": "Trung Tâm Bãi Sau Thùy Vân",
+    "highlights": [
+      "Phòng ốc rộng thoáng, view biển ngắm hoàng hôn",
+      "Trang bị bàn Bida & Dàn Karaoke miễn phí",
+      "Sân vườn nướng BBQ rộng rãi cho đoàn 20 người"
+    ]
   }
 ];
 

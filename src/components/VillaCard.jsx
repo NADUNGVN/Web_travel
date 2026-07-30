@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Bed, Bath, Star, ChevronRight } from 'lucide-react';
+import { Bed, Bath, Users, ChevronRight, Sparkles } from 'lucide-react';
 import { getCostPerPerson } from '../data/mockVillas';
 
 const FALLBACK_IMAGE = "https://images.unsplash.com/photo-1512915922686-57c11dde9b6b?auto=format&fit=crop&w=1000&q=80";
@@ -24,25 +24,17 @@ export const VillaCard = ({
 }) => {
   const [imgSrc, setImgSrc] = useState(villa.images[0] || FALLBACK_IMAGE);
   const costPerPerson = getCostPerPerson(villa.priceTotal, 20, 2);
+  const totalMillion = (villa.priceTotal / 1000000).toFixed(1);
 
   // Real Vote Counter (0 fake data)
   const baseVotes = (villa.votes?.yes || 0) + (villa.votes?.maybe || 0) + (villa.votes?.no || 0);
   const totalVotesCount = userVote ? baseVotes + 1 : baseVotes;
 
-  const getFitBadge = () => {
-    if (villa.capacity >= 20) {
-      return <div className="fit-badge perfect">🟢 {villa.capacity} Khách</div>;
-    } else if (villa.capacity >= 18) {
-      return <div className="fit-badge extra_bed">🟡 {villa.capacity} Khách</div>;
-    }
-    return <div className="fit-badge tight">🔴 {villa.capacity} Khách</div>;
-  };
-
   const getVoteLabel = () => {
     if (userVote === 'yes') return <span style={{ color: '#34d399', fontSize: '11px', fontWeight: 700 }}>🌟 Bạn đã chọn Ưu tiên</span>;
     if (userVote === 'maybe') return <span style={{ color: '#fbbf24', fontSize: '11px', fontWeight: 700 }}>🤔 Bạn đang Cân nhắc</span>;
     if (userVote === 'no') return <span style={{ color: '#f87171', fontSize: '11px', fontWeight: 700 }}>❌ Không hợp</span>;
-    return <span style={{ color: '#94a3b8', fontSize: '11px' }}>Chưa vote • Bấm để xem & vote</span>;
+    return <span style={{ color: '#94a3b8', fontSize: '11px' }}>Chưa vote • Bấm xem & vote</span>;
   };
 
   return (
@@ -51,7 +43,7 @@ export const VillaCard = ({
       onClick={() => onOpenDetail(villa)}
       style={{ cursor: 'pointer', transition: 'transform 0.15s ease' }}
     >
-      {/* Image Container */}
+      {/* 1. Hình ảnh */}
       <div className="card-image-wrapper">
         <img
           src={imgSrc}
@@ -60,8 +52,10 @@ export const VillaCard = ({
           onError={() => setImgSrc(FALLBACK_IMAGE)}
         />
         
-        {/* Fit Badge (Top Left) */}
-        {getFitBadge()}
+        {/* Badge Sức Chứa (Top Left) */}
+        <div className="fit-badge perfect" style={{ background: 'rgba(15, 23, 42, 0.85)', backdropFilter: 'blur(8px)' }}>
+          🟢 {villa.capacity} Khách
+        </div>
 
         {/* Real Vote Count Badge (Top Right) */}
         <div style={{
@@ -71,7 +65,7 @@ export const VillaCard = ({
           background: totalVotesCount > 0 ? 'rgba(16, 185, 129, 0.9)' : 'rgba(15, 23, 42, 0.85)',
           backdropFilter: 'blur(8px)',
           border: `1px solid ${totalVotesCount > 0 ? '#34d399' : 'rgba(255, 255, 255, 0.15)'}`,
-          color: totalVotesCount > 0 ? '#white' : '#94a3b8',
+          color: totalVotesCount > 0 ? 'white' : '#94a3b8',
           padding: '4px 10px',
           borderRadius: '99px',
           fontSize: '11px',
@@ -82,25 +76,41 @@ export const VillaCard = ({
           zIndex: 2,
           boxShadow: '0 2px 8px rgba(0,0,0,0.4)'
         }}>
-          🗳️ {totalVotesCount} đã vote
-        </div>
-
-        {/* Price Badge (Bottom Right) */}
-        <div className="price-tag">
-          <div className="price-main">
-            ~{(costPerPerson / 1000).toLocaleString()}k <span style={{ fontSize: '10px', fontWeight: 500 }}>/người</span>
-          </div>
+          🗳️ {totalVotesCount} vote
         </div>
       </div>
 
-      {/* Card Info */}
-      <div className="card-content" style={{ padding: '12px 14px', gap: '6px' }}>
+      {/* Content Section */}
+      <div className="card-content" style={{ padding: '12px 14px', gap: '8px' }}>
+        {/* Title */}
         <h3 className="card-title" style={{ fontSize: '14px', fontWeight: '700', lineHeight: 1.3 }}>
           {getCleanVillaTitle(villa.name)}
         </h3>
 
-        {/* Specs Bar */}
-        <div className="card-specs" style={{ padding: '4px 8px', fontSize: '11px' }}>
+        {/* 2. Tổng tiền nguyên căn -> Phần chia 1/người nhỏ ở góc cùng hàng */}
+        <div style={{
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'baseline',
+          background: 'rgba(16, 185, 129, 0.12)',
+          border: '1px solid rgba(16, 185, 129, 0.3)',
+          padding: '6px 10px',
+          borderRadius: '10px'
+        }}>
+          <div style={{ fontSize: '14px', fontWeight: '800', color: '#34d399' }}>
+            {totalMillion} triệu <span style={{ fontSize: '11px', fontWeight: '500', color: '#a7f3d0' }}>/đêm</span>
+          </div>
+          <div style={{ fontSize: '10px', fontWeight: '600', color: '#94a3b8' }}>
+            (~{Math.round(costPerPerson / 1000)}k/người)
+          </div>
+        </div>
+
+        {/* 3. Thông tin Khách - Phòng ngủ - WC */}
+        <div className="card-specs" style={{ padding: '4px 8px', fontSize: '11px', display: 'flex', justifyContent: 'space-around' }}>
+          <span style={{ display: 'flex', alignItems: 'center', gap: '3px' }}>
+            <Users size={13} color="#38bdf8" /> {villa.capacity} Khách
+          </span>
+          •
           <span style={{ display: 'flex', alignItems: 'center', gap: '3px' }}>
             <Bed size={13} color="#a7f3d0" /> {villa.bedrooms} PN
           </span>
@@ -108,14 +118,22 @@ export const VillaCard = ({
           <span style={{ display: 'flex', alignItems: 'center', gap: '3px' }}>
             <Bath size={13} color="#a7f3d0" /> {villa.bathrooms} WC
           </span>
-          •
-          <span style={{ display: 'flex', alignItems: 'center', gap: '3px' }}>
-            <Star size={13} color="#fbbf24" /> {villa.rating}
-          </span>
         </div>
 
-        {/* Bottom Vote Status Indicator */}
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingTop: '4px', borderTop: '1px solid rgba(255,255,255,0.06)' }}>
+        {/* 4. Điểm đặc biệt */}
+        {villa.highlights && villa.highlights.length > 0 && (
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '3px', paddingTop: '2px' }}>
+            {villa.highlights.slice(0, 2).map((hl, idx) => (
+              <div key={idx} style={{ fontSize: '11px', color: '#cbd5e1', display: 'flex', alignItems: 'center', gap: '4px' }}>
+                <Sparkles size={11} color="#fbbf24" style={{ flexShrink: 0 }} />
+                <span style={{ whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>{hl}</span>
+              </div>
+            ))}
+          </div>
+        )}
+
+        {/* Bottom Status */}
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', paddingTop: '6px', borderTop: '1px solid rgba(255,255,255,0.06)' }}>
           {getVoteLabel()}
           <ChevronRight size={14} color="#94a3b8" />
         </div>
