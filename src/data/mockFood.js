@@ -1,4 +1,4 @@
-// Danh sách nhà hàng & quán ăn Vũng Tàu thực tế đính kèm tọa độ lat/lng cho Bản Đồ
+// Dữ liệu nhà hàng & quán ăn Vũng Tàu thực tế (Đã làm sạch toàn bộ dữ liệu giả định)
 export const mockFoodPlaces = [
   {
     "id": "food-vt-01",
@@ -11,13 +11,16 @@ export const mockFoodPlaces = [
     "lng": 107.0685,
     "image": "https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&w=800&q=80",
     "mapsUrl": "https://maps.google.com/?q=Ganh+Hao+Vung+Tau",
-    "rating": 4.9,
-    "reviewCount": 540,
     "tags": [
       "Hải sản ngắm hoàng hôn",
       "Bàn dài đoàn 20+ người",
       "Tôm hùm, Cua Cà Mau"
-    ]
+    ],
+    "votes": {
+      "yes": 0,
+      "maybe": 0,
+      "no": 0
+    }
   },
   {
     "id": "food-vt-02",
@@ -30,13 +33,16 @@ export const mockFoodPlaces = [
     "lng": 107.0855,
     "image": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80",
     "mapsUrl": "https://maps.google.com/?q=Lau+Ca+Duoi+7+Luom",
-    "rating": 4.8,
-    "reviewCount": 420,
     "tags": [
       "Đặc sản Vũng Tàu",
       "Giá bình dân",
       "Phục vụ nhanh cho đoàn đông"
-    ]
+    ],
+    "votes": {
+      "yes": 0,
+      "maybe": 0,
+      "no": 0
+    }
   },
   {
     "id": "food-vt-03",
@@ -49,13 +55,16 @@ export const mockFoodPlaces = [
     "lng": 107.091,
     "image": "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80",
     "mapsUrl": "https://maps.google.com/?q=Bo+To+Nam+Not+Vung+Tau",
-    "rating": 4.7,
-    "reviewCount": 210,
     "tags": [
       "Nướng bò tơ thơm nức",
       "Sân vườn thoáng mát",
       "Bia ướp lạnh"
-    ]
+    ],
+    "votes": {
+      "yes": 0,
+      "maybe": 0,
+      "no": 0
+    }
   },
   {
     "id": "food-vt-04",
@@ -68,13 +77,16 @@ export const mockFoodPlaces = [
     "lng": 107.0848,
     "image": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=800&q=80",
     "mapsUrl": "https://maps.google.com/?q=Banh+Khot+Goc+Vu+Sua",
-    "rating": 4.6,
-    "reviewCount": 610,
     "tags": [
       "Đặc sản nổi tiếng",
       "Ăn sáng / Ăn xế",
       "Tôm tươi cuốn rau sống"
-    ]
+    ],
+    "votes": {
+      "yes": 0,
+      "maybe": 0,
+      "no": 0
+    }
   },
   {
     "id": "food-vt-05",
@@ -87,13 +99,16 @@ export const mockFoodPlaces = [
     "lng": 107.065,
     "image": "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?auto=format&fit=crop&w=800&q=80",
     "mapsUrl": "https://maps.google.com/?q=Hai+San+Lam+Duong",
-    "rating": 4.7,
-    "reviewCount": 310,
     "tags": [
       "View nhà bè trên biển",
       "Cua hẹ hàu nướng phô mai",
       "Không gian rộng cho 20+ người"
-    ]
+    ],
+    "votes": {
+      "yes": 0,
+      "maybe": 0,
+      "no": 0
+    }
   },
   {
     "id": "food-vt-06",
@@ -106,13 +121,16 @@ export const mockFoodPlaces = [
     "lng": 107.072,
     "image": "https://images.unsplash.com/photo-1551218808-94e220e084d2?auto=format&fit=crop&w=800&q=80",
     "mapsUrl": "https://maps.google.com/?q=Oc+Tu+Nhien+Vung+Tau",
-    "rating": 4.8,
-    "reviewCount": 490,
     "tags": [
       "Ăn đêm nhậu nhẹt",
       "Ốc tươi ngon đậm vị",
       "Giá sinh viên bình dân"
-    ]
+    ],
+    "votes": {
+      "yes": 0,
+      "maybe": 0,
+      "no": 0
+    }
   },
   {
     "id": "food-vt-07",
@@ -125,13 +143,16 @@ export const mockFoodPlaces = [
     "lng": 107.082,
     "image": "https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=800&q=80",
     "mapsUrl": "https://maps.google.com/?q=Lau+Ca+Duoi+Truong+Cong+Dinh",
-    "rating": 4.7,
-    "reviewCount": 380,
     "tags": [
       "Nước lẩu chua cay",
       "Cá đuối tươi giòn",
       "Bàn dài dễ xếp chỗ"
-    ]
+    ],
+    "votes": {
+      "yes": 0,
+      "maybe": 0,
+      "no": 0
+    }
   },
   {
     "id": "food-vt-08",
@@ -144,12 +165,15 @@ export const mockFoodPlaces = [
     "lng": 107.089,
     "image": "https://images.unsplash.com/photo-1594041680534-e8c8cdebd659?auto=format&fit=crop&w=800&q=80",
     "mapsUrl": "https://maps.google.com/?q=Nuong+88+Vung+Tau",
-    "rating": 4.8,
-    "reviewCount": 180,
     "tags": [
       "Ngay sát khu villa",
       "Thịt bò Mỹ nhập khẩu",
       "Máy lạnh mát rượi"
-    ]
+    ],
+    "votes": {
+      "yes": 0,
+      "maybe": 0,
+      "no": 0
+    }
   }
 ];

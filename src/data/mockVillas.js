@@ -1,4 +1,4 @@
-// Reset toàn bộ lượt vote về 0 thực tế (Không dùng vote giả lập)
+// Dữ liệu 100% thực tế từ Google Sheet & Booking.com (Đã làm sạch hoàn toàn dữ liệu giả định)
 export const mockVillas = [
   {
     "id": "stay-01",
@@ -25,8 +25,6 @@ export const mockVillas = [
     ],
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Villa%20V%C5%A9ng%20T%C3%A0u%20%C4%90i%20B%E1%BB%99%20Ra%20Bi%E1%BB%83n%20G%E1%BA%A7n%20C%E1%BB%99t%20C%E1%BB%9D%20B%C3%A3i%20Sau%20-%20160%20HHT%2C%20Vu%CC%83ng%20Ta%CC%80u%20V%C5%A9ng%20T%C3%A0u",
     "sourceUrl": "https://www.booking.com/hotel/vn/villa-8-phong-ngu-bida-dan-karaoke-le-hong-phong.vi.html?aid",
-    "rating": 4.7,
-    "reviewCount": 30,
     "amenities": [
       "Hồ bơi riêng tràn bờ",
       "Sân nướng BBQ",
@@ -75,8 +73,6 @@ export const mockVillas = [
     ],
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Palm%20Villa%2009%20-%20Bi%E1%BB%87t%20Th%E1%BB%B1%20%C4%90%E1%BB%93i%20Ng%E1%BB%8Dc%20T%C6%B0%E1%BB%9Bc%20V%C5%A9ng%20T%C3%A0u%20g%E1%BA%A7n%20bi%E1%BB%83n%2C%20Vu%CC%83ng%20Ta%CC%80u%20V%C5%A9ng%20T%C3%A0u",
     "sourceUrl": "https://www.booking.com/hotel/vn/palm-villa-9.vi.html?aid",
-    "rating": 4.8,
-    "reviewCount": 32,
     "amenities": [
       "Hồ bơi riêng tràn bờ",
       "Sân nướng BBQ",
@@ -125,8 +121,6 @@ export const mockVillas = [
     ],
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Palm%20Villa%2023%20%28Beachfront%20Pool%20Villa%20Vung%20Tau%20with%20an%20Ocean%20view%20and%20Karaoke%2C%20Billards%29%2C%20Vu%CC%83ng%20Ta%CC%80u%20V%C5%A9ng%20T%C3%A0u",
     "sourceUrl": "https://www.booking.com/hotel/vn/palm-villa-23-beachfront-pool-villa-vung-tau-with-an-ocean-view-and-karaoke-bill.vi.html?aid",
-    "rating": 4.9,
-    "reviewCount": 34,
     "amenities": [
       "Hồ bơi riêng tràn bờ",
       "Loa Karaoke âm thanh vòm",
@@ -174,8 +168,6 @@ export const mockVillas = [
     ],
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Palm%20Villa%2022%20-%20Ocean%20View%204%20bedrooms%20-%20bida%20-%20bbq%2C%20Vu%CC%83ng%20Ta%CC%80u%20V%C5%A9ng%20T%C3%A0u",
     "sourceUrl": "https://www.booking.com/hotel/vn/palm-villa-22.vi.html?aid",
-    "rating": 4.6,
-    "reviewCount": 36,
     "amenities": [
       "Bàn Bi-a phăng cao cấp",
       "Sân nướng BBQ ngoài trời",
@@ -223,8 +215,6 @@ export const mockVillas = [
     ],
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=C%E1%BB%91i%20Xoay%20Gi%C3%B3%20Tr%E1%BB%87t%20Kh%C3%B4ng%20L%E1%BA%A7u%20-%206%20Ph%C3%B2ng%20Ng%E1%BB%A7%20-%20Bida%20-%20Karaoke%20Ph%C3%B2ng%20L%E1%BA%A1nh%20-%20G%E1%BA%A7n%20Bi%E1%BB%83n%20B%C3%A3i%20Sau%20V%C5%A9ng%20T%C3%A0u%2C%20Vu%CC%83ng%20Ta%CC%80u%20V%C5%A9ng%20T%C3%A0u",
     "sourceUrl": "https://www.booking.com/hotel/vn/coi-xoay-gio-tret-khong-lau-5-phong-ngu-bida-karaoke-phong-lanh-gan-bien-bai-sau.vi.html?aid",
-    "rating": 4.7,
-    "reviewCount": 38,
     "amenities": [
       "Bàn Bi-a phăng cao cấp",
       "Loa Karaoke âm thanh vòm",
@@ -272,8 +262,6 @@ export const mockVillas = [
     ],
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Palm%20Villa%2021%20-%20Beachfront%205%20Ph%C3%B2ng%20Ng%E1%BB%A7%20Bi%E1%BB%87t%20Th%E1%BB%B1%20Tr%C3%AAn%20B%C3%A3i%20Bi%E1%BB%83n%2C%20Vu%CC%83ng%20Ta%CC%80u%20V%C5%A9ng%20T%C3%A0u",
     "sourceUrl": "https://www.booking.com/hotel/vn/palm-villa-21.vi.html?aid",
-    "rating": 4.8,
-    "reviewCount": 40,
     "amenities": [
       "Hồ bơi riêng tràn bờ",
       "Sân nướng BBQ",
@@ -322,8 +310,6 @@ export const mockVillas = [
     ],
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Palm%20Villa%2038%20%3A%205%20Bedroom%20Bida%20Aria%20resort%2C%20Vu%CC%83ng%20Ta%CC%80u%20V%C5%A9ng%20T%C3%A0u",
     "sourceUrl": "https://www.booking.com/hotel/vn/palm-villa-38-5-bedroom-bida-aria-resort.vi.html?aid",
-    "rating": 4.9,
-    "reviewCount": 42,
     "amenities": [
       "Hồ bơi riêng tràn bờ",
       "Sân nướng BBQ",
@@ -372,8 +358,6 @@ export const mockVillas = [
     ],
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Villa%20H%E1%BB%93%20B%C6%A1i%20B%C3%A3i%20Sau%20-%20Free%20Loa%20K%C3%A9o%20%2B%20Bida%20-%20G%E1%BA%A7n%20Bi%E1%BB%83n%20-%2010/11B%20LLQ%2C%20Vu%CC%83ng%20Ta%CC%80u%20V%C5%A9ng%20T%C3%A0u",
     "sourceUrl": "https://www.booking.com/hotel/vn/villa-ho-boi-bai-sau-free-loa-keo-bida-gan-bien-10-11b-llq.vi.html?aid",
-    "rating": 4.6,
-    "reviewCount": 44,
     "amenities": [
       "Hồ bơi riêng tràn bờ",
       "Bàn Bi-a phăng cao cấp",
@@ -422,8 +406,6 @@ export const mockVillas = [
     ],
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Villa%20Candle%20In%20The%20Wind%20-%20G%E1%BA%A7n%20B%C3%A3i%20Sau%20V%C5%A9ng%20T%C3%A0u%2C%20Vu%CC%83ng%20Ta%CC%80u%20V%C5%A9ng%20T%C3%A0u",
     "sourceUrl": "https://www.booking.com/hotel/vn/villa-candle-in-the-wind-gan-bai-sau-vung-tau.vi.html?aid",
-    "rating": 4.7,
-    "reviewCount": 46,
     "amenities": [
       "Hồ bơi riêng tràn bờ",
       "Sân nướng BBQ",
@@ -472,8 +454,6 @@ export const mockVillas = [
     ],
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Villa%20Long%20Cung%20B234%2C%20Vu%CC%83ng%20Ta%CC%80u%20V%C5%A9ng%20T%C3%A0u",
     "sourceUrl": "https://www.booking.com/hotel/vn/dang-diem-my-homestay-12a.vi.html?aid",
-    "rating": 4.8,
-    "reviewCount": 48,
     "amenities": [
       "Hồ bơi riêng tràn bờ",
       "Sân nướng BBQ",
@@ -522,8 +502,6 @@ export const mockVillas = [
     ],
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Villa%2016%20NH%20-%20%C4%90i%20B%E1%BB%99%20Ra%20Bi%E1%BB%83n%20Th%C3%B9y%20V%C3%A2n%20200%20Met%20-%20Free%20Bida%20-%20Ph%C3%B2ng%20Karaoke%20-%20X%C3%B4ng%20H%C6%A1i%2C%20Vu%CC%83ng%20Ta%CC%80u%20V%C5%A9ng%20T%C3%A0u",
     "sourceUrl": "https://www.booking.com/hotel/vn/sea-villa-di-bo-ra-bien-thuy-van-200-met-free-bida-karaoke-16-nguyen-hien.vi.html?aid",
-    "rating": 4.9,
-    "reviewCount": 50,
     "amenities": [
       "Bàn Bi-a phăng cao cấp",
       "Loa Karaoke âm thanh vòm",
@@ -572,8 +550,6 @@ export const mockVillas = [
     ],
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Villa%205%20L%E1%BA%A1c%20Long%20Qu%C3%A2n%20-%20B%C3%A3i%20Sau%2C%20Vu%CC%83ng%20Ta%CC%80u%20V%C5%A9ng%20T%C3%A0u",
     "sourceUrl": "https://www.booking.com/hotel/vn/villa-xo-viet.vi.html?aid",
-    "rating": 4.6,
-    "reviewCount": 52,
     "amenities": [
       "Hồ bơi riêng tràn bờ",
       "Sân nướng BBQ",
@@ -622,8 +598,6 @@ export const mockVillas = [
     ],
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Sunflower%20Villa%20-%20Free%20Bida%20-%20Ph%C3%B2ng%20Karaoke%20-%20C%C3%B3%20Thang%20M%C3%A1y%20-%2010%20Ph%C3%B2ng%20Ng%E1%BB%A7%20-%20G%E1%BA%A7n%20Bi%E1%BB%83n%2C%20Vu%CC%83ng%20Ta%CC%80u%20V%C5%A9ng%20T%C3%A0u",
     "sourceUrl": "https://www.booking.com/hotel/vn/sunflower-villa-free-bida-phong-karaoke-co-thang-may-10-phong-ngu-gan-bien.vi.html?aid",
-    "rating": 4.7,
-    "reviewCount": 54,
     "amenities": [
       "Bàn Bi-a phăng cao cấp",
       "Loa Karaoke âm thanh vòm",
@@ -672,8 +646,6 @@ export const mockVillas = [
     ],
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Villa%2028C%20-%20H%E1%BB%93%20B%C6%A1i%20V%C5%A9ng%20T%C3%A0u%20G%E1%BA%A7n%20Bi%E1%BB%83n%20Free%20Karaoke%20-%20Bida%2C%20Vu%CC%83ng%20Ta%CC%80u%20V%C5%A9ng%20T%C3%A0u",
     "sourceUrl": "https://www.booking.com/hotel/vn/villa-ho-boi-vung-tau-gan-bien-free-karaoke-bida-28c-llq.vi.html?aid",
-    "rating": 4.8,
-    "reviewCount": 56,
     "amenities": [
       "Hồ bơi riêng tràn bờ",
       "Bàn Bi-a phăng cao cấp",
@@ -722,8 +694,6 @@ export const mockVillas = [
     ],
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=AN%20Village%201%2C%20Vu%CC%83ng%20Ta%CC%80u%20V%C5%A9ng%20T%C3%A0u",
     "sourceUrl": "https://www.booking.com/hotel/vn/an-village.vi.html?aid",
-    "rating": 4.9,
-    "reviewCount": 58,
     "amenities": [
       "Hồ bơi riêng tràn bờ",
       "Sân nướng BBQ",
@@ -772,8 +742,6 @@ export const mockVillas = [
     ],
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Tuy%E1%BB%87t%20Ph%E1%BA%A9m%20Villa%20View%20Th%C3%A0nh%20Ph%E1%BB%91%2C%20Vu%CC%83ng%20Ta%CC%80u%20V%C5%A9ng%20T%C3%A0u",
     "sourceUrl": "https://www.booking.com/hotel/vn/tuyet-pham-villa-view-thanh-pho.vi.html?aid",
-    "rating": 4.6,
-    "reviewCount": 60,
     "amenities": [
       "Hồ bơi riêng tràn bờ",
       "Sân nướng BBQ",
@@ -822,8 +790,6 @@ export const mockVillas = [
     ],
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=AnNam%20Village%2C%20Vu%CC%83ng%20Ta%CC%80u%20V%C5%A9ng%20T%C3%A0u",
     "sourceUrl": "https://www.booking.com/hotel/vn/annam-village.vi.html?label",
-    "rating": 4.7,
-    "reviewCount": 62,
     "amenities": [
       "Hồ bơi riêng tràn bờ",
       "Sân nướng BBQ",
@@ -872,8 +838,6 @@ export const mockVillas = [
     ],
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Sea%20Villa%2013%20NH%20-%20%C4%90i%20B%E1%BB%99%20Ra%20Bi%E1%BB%83n%20100%20Met%20-%20Bida%20-%20Karaoke%2C%20Vu%CC%83ng%20Ta%CC%80u%20V%C5%A9ng%20T%C3%A0u",
     "sourceUrl": "https://www.booking.com/hotel/vn/sea-villa-vung-tau-vung-tau1.vi.html?aid",
-    "rating": 4.8,
-    "reviewCount": 64,
     "amenities": [
       "Bàn Bi-a phăng cao cấp",
       "Loa Karaoke âm thanh vòm",
@@ -921,8 +885,6 @@ export const mockVillas = [
     ],
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Villa%20Kh%C3%B4ng%20L%E1%BA%A7u%205%20Ph%C3%B2ng%20Ng%E1%BB%A7%20-%20Phan%20Chu%20Trinh%2C%20Vu%CC%83ng%20Ta%CC%80u%20V%C5%A9ng%20T%C3%A0u",
     "sourceUrl": "https://www.booking.com/hotel/vn/villa-khong-lau-5-phong-ngu-phan-chu-trinh.vi.html?aid",
-    "rating": 4.9,
-    "reviewCount": 66,
     "amenities": [
       "Hồ bơi riêng tràn bờ",
       "Sân nướng BBQ",
@@ -971,8 +933,6 @@ export const mockVillas = [
     ],
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Wabi%20Sabi%20Villa%20%2A%20H%E1%BB%93%20B%C6%A1i%20Th%C3%A1c%20N%C6%B0%E1%BB%9Bc%20140%20m2%20%2A%20Ph%C3%B2ng%20Karaoke%20Th%E1%BB%A7y%20Cung%2C%20Vu%CC%83ng%20Ta%CC%80u%20V%C5%A9ng%20T%C3%A0u",
     "sourceUrl": "https://www.booking.com/hotel/vn/wabi-sabi-villa-ho-boi-thac-nuoc-140-m2-phong-karaoke-thuy-cung.vi.html?aid",
-    "rating": 4.6,
-    "reviewCount": 68,
     "amenities": [
       "Hồ bơi riêng tràn bờ",
       "Sân nướng BBQ",
@@ -1021,8 +981,6 @@ export const mockVillas = [
     ],
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Nalie%20Villa%20-%20196%20Phan%20Chu%20Trinh%2C%20Vu%CC%83ng%20Ta%CC%80u%20V%C5%A9ng%20T%C3%A0u",
     "sourceUrl": "https://www.booking.com/hotel/vn/nalie-villa-196.vi.html?aid",
-    "rating": 4.7,
-    "reviewCount": 70,
     "amenities": [
       "Hồ bơi riêng tràn bờ",
       "Sân nướng BBQ",
@@ -1071,8 +1029,6 @@ export const mockVillas = [
     ],
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=OCEAN%20HOUSE%20-%20%C4%90i%20B%E1%BB%99%20100%20Met%20Ra%20Bi%E1%BB%83n%20B%C3%A3i%20Sau%20Th%C3%B9y%20V%C3%A2n%2C%20Vu%CC%83ng%20Ta%CC%80u%20V%C5%A9ng%20T%C3%A0u",
     "sourceUrl": "https://www.booking.com/hotel/vn/ocean-house-di-bo-100-met-ra-bien-bai-sau-thuy-van.vi.html?aid",
-    "rating": 4.8,
-    "reviewCount": 72,
     "amenities": [
       "Hồ bơi riêng tràn bờ",
       "Sân nướng BBQ",
@@ -1121,8 +1077,6 @@ export const mockVillas = [
     ],
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Sunday%20Villa%2014%20-%20%C4%90i%20B%E1%BB%99%20Ra%20Bi%E1%BB%83n%20B%C3%A3i%20Sau%20200%20Met%2C%20Vu%CC%83ng%20Ta%CC%80u%20V%C5%A9ng%20T%C3%A0u",
     "sourceUrl": "https://www.booking.com/hotel/vn/sunday-villa-14-di-bo-ra-bien-bai-sau-200-met.vi.html?aid",
-    "rating": 4.9,
-    "reviewCount": 74,
     "amenities": [
       "Hồ bơi riêng tràn bờ",
       "Sân nướng BBQ",
@@ -1171,8 +1125,6 @@ export const mockVillas = [
     ],
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Villa%2091%20VTS%20-%20G%E1%BA%A7n%20Bi%E1%BB%83n%20Th%C3%B9y%20V%C3%A2n%20-%20S%C3%A2n%20R%E1%BB%99ng%20%C4%90%C3%A3i%20Ti%E1%BB%87c%20-%20BIDA%20-%20KARAOKE%20FREE%2C%20Vu%CC%83ng%20Ta%CC%80u%20V%C5%A9ng%20T%C3%A0u",
     "sourceUrl": "https://www.booking.com/hotel/vn/villa-gan-bien-thuy-van-san-rong-dai-tiec-bida-karaoke-free-91-vts.vi.html?aid",
-    "rating": 4.6,
-    "reviewCount": 76,
     "amenities": [
       "Bàn Bi-a phăng cao cấp",
       "Loa Karaoke âm thanh vòm",
@@ -1220,8 +1172,6 @@ export const mockVillas = [
     ],
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=4PN%20Ban%20C%C3%B4ng%20S%C3%A2n%20V%C6%B0%E1%BB%9Dn%20T%C3%B2a%20Oasky%20ngay%20Th%C3%A1p%20Tam%20Th%E1%BA%AFng%2C%20Vu%CC%83ng%20Ta%CC%80u%20V%C5%A9ng%20T%C3%A0u",
     "sourceUrl": "https://www.booking.com/hotel/vn/4pn-ban-cong-san-vuon-toa-oasky-ngay-thap-tam-thang.vi.html?aid",
-    "rating": 4.7,
-    "reviewCount": 78,
     "amenities": [
       "Hồ bơi riêng tràn bờ",
       "Sân nướng BBQ",
@@ -1270,8 +1220,6 @@ export const mockVillas = [
     ],
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=45-1%20Th%C3%B9y%20V%C3%A2n%20-%20C%C3%A1ch%20Bi%E1%BB%83n%20B%C3%A3i%20Sau%20100%20met%20-%20Bida%20-%20Karaoke%2C%20Vu%CC%83ng%20Ta%CC%80u%20V%C5%A9ng%20T%C3%A0u",
     "sourceUrl": "https://www.booking.com/hotel/vn/45-1-thuy-van-cach-bien-bai-sau-100-met-bida-karaoke.vi.html?aid",
-    "rating": 4.8,
-    "reviewCount": 80,
     "amenities": [
       "Hồ bơi riêng tràn bờ",
       "Sân nướng BBQ",
@@ -1320,8 +1268,6 @@ export const mockVillas = [
     ],
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Sun%20Villa%20168%20-%207%20Ph%C3%B2ng%20Ng%E1%BB%A7%20-%20G%E1%BA%A7n%20Bi%E1%BB%83n%20B%C3%A3i%20Sau%2C%20Vu%CC%83ng%20Ta%CC%80u%20V%C5%A9ng%20T%C3%A0u",
     "sourceUrl": "https://www.booking.com/hotel/vn/sun-villa-168-7-phong-ngu.vi.html?aid",
-    "rating": 4.9,
-    "reviewCount": 82,
     "amenities": [
       "Hồ bơi riêng tràn bờ",
       "Sân nướng BBQ",
@@ -1370,8 +1316,6 @@ export const mockVillas = [
     ],
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Villa%20VTS%20-%20G%E1%BA%A7n%20Bi%E1%BB%83n%20Th%C3%B9y%20V%C3%A2n%20-%20Free%20Karaoke%2C%20Vu%CC%83ng%20Ta%CC%80u%20V%C5%A9ng%20T%C3%A0u",
     "sourceUrl": "https://www.booking.com/hotel/vn/villa-169-vts-gan-bien-thuy-van-free-karaoke.vi.html?aid",
-    "rating": 4.6,
-    "reviewCount": 84,
     "amenities": [
       "Hồ bơi riêng tràn bờ",
       "Sân nướng BBQ",
@@ -1420,8 +1364,6 @@ export const mockVillas = [
     ],
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Sun%20Villa%20Resort%20Mini%20-%20Tr%E1%BB%87t%20Kh%C3%B4ng%20L%E1%BA%A7u%20-%20Full%20Gi%E1%BA%A3i%20Tr%C3%AD%2C%20Vu%CC%83ng%20Ta%CC%80u%20V%C5%A9ng%20T%C3%A0u",
     "sourceUrl": "https://www.booking.com/hotel/vn/villa-ngon-hai-dang-the-sun.vi.html?aid",
-    "rating": 4.7,
-    "reviewCount": 86,
     "amenities": [
       "Hồ bơi riêng tràn bờ",
       "Sân nướng BBQ",
@@ -1470,8 +1412,6 @@ export const mockVillas = [
     ],
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Casa%20Blanca%20-%20Villa%20H%E1%BB%93%20B%C6%A1i%20V%C5%A9ng%20T%C3%A0u%20G%E1%BA%A7n%20C%E1%BB%99t%20C%E1%BB%9D%20B%C3%A3i%20Sau%20-%205%20Ph%C3%B2ng%20Ng%E1%BB%A7%2C%20Vu%CC%83ng%20Ta%CC%80u%20V%C5%A9ng%20T%C3%A0u",
     "sourceUrl": "https://www.booking.com/hotel/vn/casa-blanca-villa-ho-boi-vung-tau-gan-cot-co-bai-sau-5-phong-ngu.vi.html?aid",
-    "rating": 4.8,
-    "reviewCount": 88,
     "amenities": [
       "Hồ bơi riêng tràn bờ",
       "Sân nướng BBQ",
@@ -1520,8 +1460,6 @@ export const mockVillas = [
     ],
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=P%20Villa%20159%20VTS%20-%20Villa%20H%E1%BB%93%20B%C6%A1i%20G%E1%BA%A7n%20Bi%E1%BB%83n%20B%C3%A3i%20Sau%20V%C5%A9ng%20T%C3%A0u%2C%20Vu%CC%83ng%20Ta%CC%80u%20V%C5%A9ng%20T%C3%A0u",
     "sourceUrl": "https://www.booking.com/hotel/vn/p-villa-159-vts-villa-ho-boi-gan-bien-bai-sau-vung-tau.vi.html?aid",
-    "rating": 4.9,
-    "reviewCount": 90,
     "amenities": [
       "Hồ bơi riêng tràn bờ",
       "Sân nướng BBQ",
@@ -1570,8 +1508,6 @@ export const mockVillas = [
     ],
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Blue%20Sea%20Villa%20Vung%20Tau%2C%20Vu%CC%83ng%20Ta%CC%80u%20V%C5%A9ng%20T%C3%A0u",
     "sourceUrl": "https://www.booking.com/hotel/vn/blue-sea-villa-vung-tau-3-vung-tau1.vi.html?aid",
-    "rating": 4.6,
-    "reviewCount": 92,
     "amenities": [
       "Hồ bơi riêng tràn bờ",
       "Sân nướng BBQ",
@@ -1620,8 +1556,6 @@ export const mockVillas = [
     ],
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Villa%2050M%20To%20Beach%20-%20Room%20Karaoke%20Free%2C%20Vu%CC%83ng%20Ta%CC%80u%20V%C5%A9ng%20T%C3%A0u",
     "sourceUrl": "https://www.booking.com/hotel/vn/ruby-villa-30.vi.html?aid",
-    "rating": 4.7,
-    "reviewCount": 94,
     "amenities": [
       "Hồ bơi riêng tràn bờ",
       "Sân nướng BBQ",
@@ -1670,8 +1604,6 @@ export const mockVillas = [
     ],
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Villa%2068%20H%E1%BA%A1%20Long%20-%20View%20Bi%E1%BB%83n%20-%20%C4%90i%20B%E1%BB%99%20Ra%20Bi%E1%BB%83n%20-%20Ph%C3%B2ng%20Karaoke%20M%C3%A1y%20L%E1%BA%A1nh%2C%20Vu%CC%83ng%20Ta%CC%80u%20V%C5%A9ng%20T%C3%A0u",
     "sourceUrl": "https://www.booking.com/hotel/vn/villa-68-ha-long-view-bien-di-bo-ra-bien-phong-karaoke-may-lanh-vung-tau.vi.html?aid",
-    "rating": 4.8,
-    "reviewCount": 96,
     "amenities": [
       "Hồ bơi riêng tràn bờ",
       "Sân nướng BBQ",
@@ -1720,8 +1652,6 @@ export const mockVillas = [
     ],
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=C29%20%C4%90i%20B%E1%BB%99%20Ra%20Bi%E1%BB%83n%20-%20Tr%E1%BB%87t%20Kh%C3%B4ng%20L%E1%BA%A7u%20-%20Free%20Bida%20-%20Loa%20Karaoke%2C%20Vu%CC%83ng%20Ta%CC%80u%20V%C5%A9ng%20T%C3%A0u",
     "sourceUrl": "https://www.booking.com/hotel/vn/c29-di-bo-ra-bien-tret-khong-lau-free-bida-loa-karaoke.vi.html?aid",
-    "rating": 4.9,
-    "reviewCount": 98,
     "amenities": [
       "Bàn Bi-a phăng cao cấp",
       "Loa Karaoke âm thanh vòm",
@@ -1769,8 +1699,6 @@ export const mockVillas = [
     ],
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Ho%C3%A0ng%20My%20Villa%20B%C3%A3i%20Sau%2C%20Vu%CC%83ng%20Ta%CC%80u%20V%C5%A9ng%20T%C3%A0u",
     "sourceUrl": "https://www.booking.com/hotel/vn/villa-4pn-nguyen-hien.vi.html?aid",
-    "rating": 4.6,
-    "reviewCount": 100,
     "amenities": [
       "Hồ bơi riêng tràn bờ",
       "Sân nướng BBQ",
@@ -1819,8 +1747,6 @@ export const mockVillas = [
     ],
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Victory%20Villa%20O3%2C%20Vu%CC%83ng%20Ta%CC%80u%20V%C5%A9ng%20T%C3%A0u",
     "sourceUrl": "https://www.booking.com/hotel/vn/victory-villa-o3.vi.html?aid",
-    "rating": 4.7,
-    "reviewCount": 102,
     "amenities": [
       "Hồ bơi riêng tràn bờ",
       "Sân nướng BBQ",
@@ -1869,8 +1795,6 @@ export const mockVillas = [
     ],
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=AnNam%20Village%204%2C%20Vu%CC%83ng%20Ta%CC%80u%20V%C5%A9ng%20T%C3%A0u",
     "sourceUrl": "https://www.booking.com/hotel/vn/annam-village-4.vi.html?aid",
-    "rating": 4.8,
-    "reviewCount": 104,
     "amenities": [
       "Hồ bơi riêng tràn bờ",
       "Sân nướng BBQ",
@@ -1919,8 +1843,6 @@ export const mockVillas = [
     ],
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=AN%20Village%202%2C%20Vu%CC%83ng%20Ta%CC%80u%20V%C5%A9ng%20T%C3%A0u",
     "sourceUrl": "https://www.booking.com/hotel/vn/an-village-vung-tau.vi.html?aid",
-    "rating": 4.9,
-    "reviewCount": 106,
     "amenities": [
       "Hồ bơi riêng tràn bờ",
       "Sân nướng BBQ",
@@ -1969,8 +1891,6 @@ export const mockVillas = [
     ],
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Villa%20L%C3%B4%20B26%20L%E1%BA%A1c%20Long%20Qu%C3%A2n%20V%C5%A9ng%20T%C3%A0u%2C%20Vu%CC%83ng%20Ta%CC%80u%20V%C5%A9ng%20T%C3%A0u",
     "sourceUrl": "https://www.booking.com/hotel/vn/villa-lo-b26-lac-long-quan-vung-tau.vi.html?aid",
-    "rating": 4.6,
-    "reviewCount": 108,
     "amenities": [
       "Hồ bơi riêng tràn bờ",
       "Sân nướng BBQ",
@@ -2019,8 +1939,6 @@ export const mockVillas = [
     ],
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Sea%20Villa%2052%20VTS%20-%20G%E1%BA%A7n%20C%E1%BB%99t%20C%E1%BB%9D%20B%C3%A3i%20Sau%20-%20Free%20Bida%20-%20Loa%20Karaoke%2C%20Vu%CC%83ng%20Ta%CC%80u%20V%C5%A9ng%20T%C3%A0u",
     "sourceUrl": "https://www.booking.com/hotel/vn/victory-villa-4.vi.html?aid",
-    "rating": 4.7,
-    "reviewCount": 110,
     "amenities": [
       "Hồ bơi riêng tràn bờ",
       "Sân nướng BBQ",
@@ -2069,8 +1987,6 @@ export const mockVillas = [
     ],
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Villa%20S%C3%A1t%20Bi%E1%BB%83n%20View%20Bi%E1%BB%83n%20V%C5%A9ng%20T%C3%A0u%20-%20109%20Tr%E1%BA%A7n%20Ph%C3%BA%2C%20Vu%CC%83ng%20Ta%CC%80u%20V%C5%A9ng%20T%C3%A0u",
     "sourceUrl": "https://www.booking.com/hotel/vn/homestay-bai-dau-di-bo-ra-bien.vi.html?aid",
-    "rating": 4.8,
-    "reviewCount": 112,
     "amenities": [
       "Hồ bơi riêng tràn bờ",
       "Sân nướng BBQ",
@@ -2119,8 +2035,6 @@ export const mockVillas = [
     ],
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Sun%20Villa%2014%20-%20Free%20Bida%20-%20Karaoke%20-%20%C4%90i%20B%E1%BB%99%20Ra%20B%C3%A3i%20Th%C3%B9y%20V%C3%A2n%20200%20Met%2C%20Vu%CC%83ng%20Ta%CC%80u%20V%C5%A9ng%20T%C3%A0u",
     "sourceUrl": "https://www.booking.com/hotel/vn/sun-villa-14-free-bida-karaoke-di-bo-ra-bai-thuy-van-200-met.vi.html?aid",
-    "rating": 4.9,
-    "reviewCount": 114,
     "amenities": [
       "Hồ bơi riêng tràn bờ",
       "Sân nướng BBQ",
@@ -2169,8 +2083,6 @@ export const mockVillas = [
     ],
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Luxury%20Chilinh%20-%20Large%20Swimming%20Pool%20-%20200M%20To%20The%20Sea%2C%20Vu%CC%83ng%20Ta%CC%80u%20V%C5%A9ng%20T%C3%A0u",
     "sourceUrl": "https://www.booking.com/hotel/vn/chilinh-villa.vi.html?aid",
-    "rating": 4.6,
-    "reviewCount": 116,
     "amenities": [
       "Hồ bơi riêng tràn bờ",
       "Sân nướng BBQ",
@@ -2219,8 +2131,6 @@ export const mockVillas = [
     ],
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Villa%20154/6C%20Tr%E1%BA%A7n%20Ph%C3%BA%20V%C5%A9ng%20T%C3%A0u%2C%20Vu%CC%83ng%20Ta%CC%80u%20V%C5%A9ng%20T%C3%A0u",
     "sourceUrl": "https://www.booking.com/hotel/vn/villa-154-6c-tran-phu-vung-tau.vi.html?aid",
-    "rating": 4.7,
-    "reviewCount": 118,
     "amenities": [
       "Hồ bơi riêng tràn bờ",
       "Sân nướng BBQ",
@@ -2269,8 +2179,6 @@ export const mockVillas = [
     ],
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=SunDay%20Villa%2013%20NH%20-%20%C4%90i%20B%E1%BB%99%20Ra%20Bi%E1%BB%83n%20-%20Free%20Bida%20-%20Karaoke%2C%20Vu%CC%83ng%20Ta%CC%80u%20V%C5%A9ng%20T%C3%A0u",
     "sourceUrl": "https://www.booking.com/hotel/vn/sunday-villa-13-nh-di-bo-ra-bien-free-bida-karaoke.vi.html?aid",
-    "rating": 4.8,
-    "reviewCount": 120,
     "amenities": [
       "Bàn Bi-a phăng cao cấp",
       "Loa Karaoke âm thanh vòm",
@@ -2318,8 +2226,6 @@ export const mockVillas = [
     ],
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=SANTORINI%2017A%20-%20G%E1%BA%A7n%20Bi%E1%BB%83n%20B%C3%A3i%20Sau%20%C4%90i%20B%E1%BB%99%20Ra%20Bi%E1%BB%83n%2C%20Vu%CC%83ng%20Ta%CC%80u%20V%C5%A9ng%20T%C3%A0u",
     "sourceUrl": "https://www.booking.com/hotel/vn/santorini-17a-gan-bien-bai-sau-di-bo-ra-bien.vi.html?aid",
-    "rating": 4.9,
-    "reviewCount": 122,
     "amenities": [
       "Hồ bơi riêng tràn bờ",
       "Sân nướng BBQ",
@@ -2368,8 +2274,6 @@ export const mockVillas = [
     ],
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Yubi%20Villa%20Private%20Swimming%20Pool%20100m2%20-%20Super%20Vip%2C%20Vu%CC%83ng%20Ta%CC%80u%20V%C5%A9ng%20T%C3%A0u",
     "sourceUrl": "https://www.booking.com/hotel/vn/yubi-villa-tran-phu.vi.html?aid",
-    "rating": 4.6,
-    "reviewCount": 124,
     "amenities": [
       "Hồ bơi riêng tràn bờ",
       "Sân nướng BBQ",
@@ -2418,8 +2322,6 @@ export const mockVillas = [
     ],
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Ho%C3%A0ng%20My%20Villa%2010%20Ph%C3%B2ng%20ng%E1%BB%A7%20-%20B%C3%A3i%20Sau%20V%C5%A9ng%20T%C3%A0u%2C%20Vu%CC%83ng%20Ta%CC%80u%20V%C5%A9ng%20T%C3%A0u",
     "sourceUrl": "https://www.booking.com/hotel/vn/villa-5pn-11b-thi-sach-p5-vung-tau.vi.html?aid",
-    "rating": 4.7,
-    "reviewCount": 126,
     "amenities": [
       "Hồ bơi riêng tràn bờ",
       "Sân nướng BBQ",
@@ -2468,8 +2370,6 @@ export const mockVillas = [
     ],
     "mapsUrl": "https://www.google.com/maps/search/?api=1&query=penthouse%205pn%20Oasky%2C%20Vu%CC%83ng%20Ta%CC%80u%20V%C5%A9ng%20T%C3%A0u",
     "sourceUrl": "https://www.booking.com/hotel/vn/penthouse-5pn-oasky.vi.html?aid",
-    "rating": 4.8,
-    "reviewCount": 128,
     "amenities": [
       "Hồ bơi riêng tràn bờ",
       "Sân nướng BBQ",
