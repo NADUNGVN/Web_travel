@@ -1,4 +1,4 @@
-// 100% Ảnh gốc cào trực tiếp từ Booking.com (Lọc sạch 100% ảnh ngoài)
+// 100% Ảnh gốc cào trực tiếp từ Booking.com (Đã làm sạch hoàn toàn 100% ảnh phụ/ảnh ngoài)
 export const mockVillas = [
   {
     "id": "stay-01",
