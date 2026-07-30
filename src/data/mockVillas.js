@@ -1,4 +1,4 @@
-// Tự động gán tọa độ địa lý Vũng Tàu cho Bản đồ tương tác
+// Tự động kiểm tra & chuẩn hóa số lượng phòng ngủ, nhà vệ sinh và sức chứa chuẩn 100%
 export const mockVillas = [
   {
     "id": "stay-01",
@@ -12,8 +12,8 @@ export const mockVillas = [
     "bedConfig": {
       "double_beds": 5,
       "single_beds": 0,
-      "extra_mattresses": 4,
-      "summary": "5 Giường đôi lớn + 4 Nệm dự phòng"
+      "extra_mattresses": 10,
+      "summary": "5 Giường đôi lớn + 10 Nệm dự phòng"
     },
     "images": [
       "https://cf.bstatic.com/xdata/images/hotel/max1024x768/609174069.jpg?k=ec8f2332fcc780c1a77ccd970c7a56260fd75ff2ffe8c3962829a7135552a6ce&o=",
@@ -62,8 +62,8 @@ export const mockVillas = [
     "bedConfig": {
       "double_beds": 5,
       "single_beds": 0,
-      "extra_mattresses": 4,
-      "summary": "5 Giường đôi lớn + 4 Nệm dự phòng"
+      "extra_mattresses": 10,
+      "summary": "5 Giường đôi lớn + 10 Nệm dự phòng"
     },
     "images": [
       "https://cf.bstatic.com/xdata/images/hotel/max1024x768/126778875.jpg?k=14a6b955f3c1e749b809e8e4d2372e42b2d4539463fdd5c7f1f45356e5d6f4a0&o=",
@@ -112,8 +112,8 @@ export const mockVillas = [
     "bedConfig": {
       "double_beds": 5,
       "single_beds": 0,
-      "extra_mattresses": 4,
-      "summary": "5 Giường đôi lớn + 4 Nệm dự phòng"
+      "extra_mattresses": 10,
+      "summary": "5 Giường đôi lớn + 10 Nệm dự phòng"
     },
     "images": [
       "https://cf.bstatic.com/xdata/images/hotel/max1024x768/333398422.jpg?k=fecc0f73eb06b65a5826556f9295fe2a40436618dd2aae37a0f794c5bfb3e6d6&o=",
@@ -155,14 +155,14 @@ export const mockVillas = [
     "location": "Bãi Sau, TP. Vũng Tàu, Bà Rịa - Vũng Tàu",
     "priceTotal": 7500000,
     "priceUnit": "căn / đêm",
-    "capacity": 20,
+    "capacity": 16,
     "bedrooms": 4,
     "bathrooms": 4,
     "bedConfig": {
       "double_beds": 4,
       "single_beds": 0,
-      "extra_mattresses": 2,
-      "summary": "4 Giường đôi lớn + 2 Nệm dự phòng"
+      "extra_mattresses": 8,
+      "summary": "4 Giường đôi lớn + 8 Nệm dự phòng"
     },
     "images": [
       "https://cf.bstatic.com/xdata/images/hotel/max1024x768/847580780.jpg?k=b1f7267e91d3bfd9c86adc71d3d6bafab2ec738dec3233c99db5f8e468ececa3&o=",
@@ -210,8 +210,8 @@ export const mockVillas = [
     "bedConfig": {
       "double_beds": 6,
       "single_beds": 0,
-      "extra_mattresses": 4,
-      "summary": "6 Giường đôi lớn + 4 Nệm dự phòng"
+      "extra_mattresses": 12,
+      "summary": "6 Giường đôi lớn + 12 Nệm dự phòng"
     },
     "images": [
       "https://cf.bstatic.com/xdata/images/hotel/max1024x768/606185449.jpg?k=2e08b364b0daa8f0d62807cb883ba896ac3b57d81bb122da1a9b208b3db3b69b&o=",
@@ -259,8 +259,8 @@ export const mockVillas = [
     "bedConfig": {
       "double_beds": 5,
       "single_beds": 0,
-      "extra_mattresses": 4,
-      "summary": "5 Giường đôi lớn + 4 Nệm dự phòng"
+      "extra_mattresses": 10,
+      "summary": "5 Giường đôi lớn + 10 Nệm dự phòng"
     },
     "images": [
       "https://cf.bstatic.com/xdata/images/hotel/max1024x768/230556864.jpg?k=8befc145a4a405d183609cddb19b954fbf4e7f0bd3ae9b79d78475aee1622749&o=",
@@ -309,8 +309,8 @@ export const mockVillas = [
     "bedConfig": {
       "double_beds": 5,
       "single_beds": 0,
-      "extra_mattresses": 4,
-      "summary": "5 Giường đôi lớn + 4 Nệm dự phòng"
+      "extra_mattresses": 10,
+      "summary": "5 Giường đôi lớn + 10 Nệm dự phòng"
     },
     "images": [
       "https://cf.bstatic.com/xdata/images/hotel/max1024x768/418137427.jpg?k=3ab1331c86ddd183f90952b87d6951d43f25b2320ec3e8c5393c2f68e7f6da57&o=",
@@ -359,8 +359,8 @@ export const mockVillas = [
     "bedConfig": {
       "double_beds": 5,
       "single_beds": 0,
-      "extra_mattresses": 4,
-      "summary": "5 Giường đôi lớn + 4 Nệm dự phòng"
+      "extra_mattresses": 10,
+      "summary": "5 Giường đôi lớn + 10 Nệm dự phòng"
     },
     "images": [
       "https://cf.bstatic.com/xdata/images/hotel/max1024x768/516576884.jpg?k=4b6b71df1497bc6c878a4c66b54cbde0f6cb4b8fe3546fcf6b4bc36f16f1ec73&o=",
@@ -409,8 +409,8 @@ export const mockVillas = [
     "bedConfig": {
       "double_beds": 5,
       "single_beds": 0,
-      "extra_mattresses": 4,
-      "summary": "5 Giường đôi lớn + 4 Nệm dự phòng"
+      "extra_mattresses": 10,
+      "summary": "5 Giường đôi lớn + 10 Nệm dự phòng"
     },
     "images": [
       "https://cf.bstatic.com/xdata/images/hotel/max1024x768/637668345.jpg?k=a7202aa1a0b574dc062e8c05569cfa433cb60fac23a603db057ad5a5e62a3ee0&o=",
@@ -459,8 +459,8 @@ export const mockVillas = [
     "bedConfig": {
       "double_beds": 5,
       "single_beds": 0,
-      "extra_mattresses": 4,
-      "summary": "5 Giường đôi lớn + 4 Nệm dự phòng"
+      "extra_mattresses": 10,
+      "summary": "5 Giường đôi lớn + 10 Nệm dự phòng"
     },
     "images": [
       "https://cf.bstatic.com/xdata/images/hotel/max1024x768/893086967.jpg?k=82734b7d52dca5afa9c47b80acd2aeea8c83a7f5a132f337f0cf6c2b53d469e3&o=",
@@ -509,8 +509,8 @@ export const mockVillas = [
     "bedConfig": {
       "double_beds": 5,
       "single_beds": 0,
-      "extra_mattresses": 4,
-      "summary": "5 Giường đôi lớn + 4 Nệm dự phòng"
+      "extra_mattresses": 10,
+      "summary": "5 Giường đôi lớn + 10 Nệm dự phòng"
     },
     "images": [
       "https://cf.bstatic.com/xdata/images/hotel/max1024x768/514021906.jpg?k=73afbfc52e85f39e840a4545a8d3e42fd72f0f0dba3d02d8f93f385e3d39fb08&o=",
@@ -559,8 +559,8 @@ export const mockVillas = [
     "bedConfig": {
       "double_beds": 5,
       "single_beds": 0,
-      "extra_mattresses": 4,
-      "summary": "5 Giường đôi lớn + 4 Nệm dự phòng"
+      "extra_mattresses": 10,
+      "summary": "5 Giường đôi lớn + 10 Nệm dự phòng"
     },
     "images": [
       "https://cf.bstatic.com/xdata/images/hotel/max1024x768/851552883.jpg?k=1fc82703f596f297607eb6546a70c7e58080bc7046372f91837407fa3755bf43&o=",
@@ -603,14 +603,14 @@ export const mockVillas = [
     "location": "Bãi Sau, TP. Vũng Tàu, Bà Rịa - Vũng Tàu",
     "priceTotal": 10500000,
     "priceUnit": "căn / đêm",
-    "capacity": 40,
+    "capacity": 35,
     "bedrooms": 10,
     "bathrooms": 9,
     "bedConfig": {
       "double_beds": 10,
       "single_beds": 0,
-      "extra_mattresses": 4,
-      "summary": "10 Giường đôi lớn + 4 Nệm dự phòng"
+      "extra_mattresses": 15,
+      "summary": "10 Giường đôi lớn + 15 Nệm dự phòng"
     },
     "images": [
       "https://cf.bstatic.com/xdata/images/hotel/max1024x768/568470291.jpg?k=e1612357ddf78e567757a63ec08b578f7005cb3024e72ece2c9c91093723a3af&o=",
@@ -659,8 +659,8 @@ export const mockVillas = [
     "bedConfig": {
       "double_beds": 5,
       "single_beds": 0,
-      "extra_mattresses": 4,
-      "summary": "5 Giường đôi lớn + 4 Nệm dự phòng"
+      "extra_mattresses": 10,
+      "summary": "5 Giường đôi lớn + 10 Nệm dự phòng"
     },
     "images": [
       "https://cf.bstatic.com/xdata/images/hotel/max1024x768/526381232.jpg?k=69570061220a432668d54d16e863b4a71b2caa0da1d160b3e32fd7a3e6e8a919&o=",
@@ -709,8 +709,8 @@ export const mockVillas = [
     "bedConfig": {
       "double_beds": 5,
       "single_beds": 0,
-      "extra_mattresses": 4,
-      "summary": "5 Giường đôi lớn + 4 Nệm dự phòng"
+      "extra_mattresses": 10,
+      "summary": "5 Giường đôi lớn + 10 Nệm dự phòng"
     },
     "images": [
       "https://cf.bstatic.com/xdata/images/hotel/max1024x768/767008701.jpg?k=d5bc3d60769283e927816720cd0129c93be6df4f9cafffcd27bbfbac79be43a4&o=",
@@ -759,8 +759,8 @@ export const mockVillas = [
     "bedConfig": {
       "double_beds": 5,
       "single_beds": 0,
-      "extra_mattresses": 4,
-      "summary": "5 Giường đôi lớn + 4 Nệm dự phòng"
+      "extra_mattresses": 10,
+      "summary": "5 Giường đôi lớn + 10 Nệm dự phòng"
     },
     "images": [
       "https://cf.bstatic.com/xdata/images/hotel/max1024x768/531291806.jpg?k=af7a857c5e443c43a34f7cd9c072869679f2f6df9d50e12da13a0304f2f29a35&o=",
@@ -809,8 +809,8 @@ export const mockVillas = [
     "bedConfig": {
       "double_beds": 5,
       "single_beds": 0,
-      "extra_mattresses": 4,
-      "summary": "5 Giường đôi lớn + 4 Nệm dự phòng"
+      "extra_mattresses": 10,
+      "summary": "5 Giường đôi lớn + 10 Nệm dự phòng"
     },
     "images": [
       "https://cf.bstatic.com/xdata/images/hotel/max1024x768/487015239.jpg?k=7df8addeb16f855262b8bb475780f3c4af5577ca42171850567c5101880fda9a&o=",
@@ -859,8 +859,8 @@ export const mockVillas = [
     "bedConfig": {
       "double_beds": 5,
       "single_beds": 0,
-      "extra_mattresses": 4,
-      "summary": "5 Giường đôi lớn + 4 Nệm dự phòng"
+      "extra_mattresses": 10,
+      "summary": "5 Giường đôi lớn + 10 Nệm dự phòng"
     },
     "images": [
       "https://cf.bstatic.com/xdata/images/hotel/max1024x768/608240887.jpg?k=164d08d9832fed5001558c8077ae1d77acdfad153f9e9f936e1b0801bef4f27f&o=",
@@ -908,8 +908,8 @@ export const mockVillas = [
     "bedConfig": {
       "double_beds": 5,
       "single_beds": 0,
-      "extra_mattresses": 4,
-      "summary": "5 Giường đôi lớn + 4 Nệm dự phòng"
+      "extra_mattresses": 10,
+      "summary": "5 Giường đôi lớn + 10 Nệm dự phòng"
     },
     "images": [
       "https://cf.bstatic.com/xdata/images/hotel/max1024x768/541339571.jpg?k=3e8d90d7c92990e711bbe4e39e80cafa6857ce27718a508c4f30d20b84011a96&o=",
@@ -958,8 +958,8 @@ export const mockVillas = [
     "bedConfig": {
       "double_beds": 5,
       "single_beds": 0,
-      "extra_mattresses": 4,
-      "summary": "5 Giường đôi lớn + 4 Nệm dự phòng"
+      "extra_mattresses": 10,
+      "summary": "5 Giường đôi lớn + 10 Nệm dự phòng"
     },
     "images": [
       "https://cf.bstatic.com/xdata/images/hotel/max1024x768/547751591.jpg?k=134b85d011389f21a819ffe0d67bf964bad7d85a45d241592413d84dbb45ba89&o=",
@@ -1008,8 +1008,8 @@ export const mockVillas = [
     "bedConfig": {
       "double_beds": 5,
       "single_beds": 0,
-      "extra_mattresses": 4,
-      "summary": "5 Giường đôi lớn + 4 Nệm dự phòng"
+      "extra_mattresses": 10,
+      "summary": "5 Giường đôi lớn + 10 Nệm dự phòng"
     },
     "images": [
       "https://cf.bstatic.com/xdata/images/hotel/max1024x768/612541100.jpg?k=0d097f2c713b9e5405219749598a37db5f87e7f84c8da2f6c88481044274ee04&o=",
@@ -1058,8 +1058,8 @@ export const mockVillas = [
     "bedConfig": {
       "double_beds": 5,
       "single_beds": 0,
-      "extra_mattresses": 4,
-      "summary": "5 Giường đôi lớn + 4 Nệm dự phòng"
+      "extra_mattresses": 10,
+      "summary": "5 Giường đôi lớn + 10 Nệm dự phòng"
     },
     "images": [
       "https://cf.bstatic.com/xdata/images/hotel/max1024x768/617843400.jpg?k=e2cdfa12553dfa30d116df7f59bc1622b46a60b324b0b08715095ace9dbf3c5e&o=",
@@ -1108,8 +1108,8 @@ export const mockVillas = [
     "bedConfig": {
       "double_beds": 5,
       "single_beds": 0,
-      "extra_mattresses": 4,
-      "summary": "5 Giường đôi lớn + 4 Nệm dự phòng"
+      "extra_mattresses": 10,
+      "summary": "5 Giường đôi lớn + 10 Nệm dự phòng"
     },
     "images": [
       "https://cf.bstatic.com/xdata/images/hotel/max1024x768/614752888.jpg?k=5edf49599f24288613b656f655bd2c08ac5a03f71130c3a0c020542fcc2e94f1&o=",
@@ -1158,8 +1158,8 @@ export const mockVillas = [
     "bedConfig": {
       "double_beds": 5,
       "single_beds": 0,
-      "extra_mattresses": 4,
-      "summary": "5 Giường đôi lớn + 4 Nệm dự phòng"
+      "extra_mattresses": 10,
+      "summary": "5 Giường đôi lớn + 10 Nệm dự phòng"
     },
     "images": [
       "https://cf.bstatic.com/xdata/images/hotel/max1024x768/514025068.jpg?k=b2a2a0a41263bd0c66fbf71dfa335f0951ad9de57bcd76134aa71e5404f6e3e7&o=",
@@ -1201,14 +1201,14 @@ export const mockVillas = [
     "location": "Bãi Sau, TP. Vũng Tàu, Bà Rịa - Vũng Tàu",
     "priceTotal": 7500000,
     "priceUnit": "căn / đêm",
-    "capacity": 20,
+    "capacity": 16,
     "bedrooms": 4,
     "bathrooms": 4,
     "bedConfig": {
       "double_beds": 4,
       "single_beds": 0,
-      "extra_mattresses": 2,
-      "summary": "4 Giường đôi lớn + 2 Nệm dự phòng"
+      "extra_mattresses": 8,
+      "summary": "4 Giường đôi lớn + 8 Nệm dự phòng"
     },
     "images": [
       "https://cf.bstatic.com/xdata/images/hotel/max1024x768/876559753.jpg?k=866385f79a634b91e410739715c6c86b4f4edb8a2b4e57e8a0fa6f6024434804&o=",
@@ -1257,8 +1257,8 @@ export const mockVillas = [
     "bedConfig": {
       "double_beds": 5,
       "single_beds": 0,
-      "extra_mattresses": 4,
-      "summary": "5 Giường đôi lớn + 4 Nệm dự phòng"
+      "extra_mattresses": 10,
+      "summary": "5 Giường đôi lớn + 10 Nệm dự phòng"
     },
     "images": [
       "https://cf.bstatic.com/xdata/images/hotel/max1024x768/589930976.jpg?k=e95567ac076141810683fa1f2bf46b3840846f32720fcc6d57a97b148fa11aec&o=",
@@ -1307,8 +1307,8 @@ export const mockVillas = [
     "bedConfig": {
       "double_beds": 7,
       "single_beds": 0,
-      "extra_mattresses": 4,
-      "summary": "7 Giường đôi lớn + 4 Nệm dự phòng"
+      "extra_mattresses": 14,
+      "summary": "7 Giường đôi lớn + 14 Nệm dự phòng"
     },
     "images": [
       "https://cf.bstatic.com/xdata/images/hotel/max1024x768/619892297.jpg?k=06703234650b237c25213bc64c448f2a3fa3fcc7fa4b7906bea64341dc8ef67b&o=",
@@ -1357,8 +1357,8 @@ export const mockVillas = [
     "bedConfig": {
       "double_beds": 5,
       "single_beds": 0,
-      "extra_mattresses": 4,
-      "summary": "5 Giường đôi lớn + 4 Nệm dự phòng"
+      "extra_mattresses": 10,
+      "summary": "5 Giường đôi lớn + 10 Nệm dự phòng"
     },
     "images": [
       "https://cf.bstatic.com/xdata/images/hotel/max1024x768/613771401.jpg?k=8033f86dd03ed4c9adb27e2ba5a01a88217c5357f1af41040e325700353d61ec&o=",
@@ -1407,8 +1407,8 @@ export const mockVillas = [
     "bedConfig": {
       "double_beds": 5,
       "single_beds": 0,
-      "extra_mattresses": 4,
-      "summary": "5 Giường đôi lớn + 4 Nệm dự phòng"
+      "extra_mattresses": 10,
+      "summary": "5 Giường đôi lớn + 10 Nệm dự phòng"
     },
     "images": [
       "https://cf.bstatic.com/xdata/images/hotel/max1024x768/766696595.jpg?k=c4327b8b0521bb8d5e6d0219d35461a1c8e45debfe67d00b108f4aabbf8c480f&o=",
@@ -1457,8 +1457,8 @@ export const mockVillas = [
     "bedConfig": {
       "double_beds": 5,
       "single_beds": 0,
-      "extra_mattresses": 4,
-      "summary": "5 Giường đôi lớn + 4 Nệm dự phòng"
+      "extra_mattresses": 10,
+      "summary": "5 Giường đôi lớn + 10 Nệm dự phòng"
     },
     "images": [
       "https://cf.bstatic.com/xdata/images/hotel/max1024x768/890439578.jpg?k=d34953fd1c33b0d3720ddf92eb918be672cd4c3b9b888811ef2da26fbf4c5486&o=",
@@ -1507,8 +1507,8 @@ export const mockVillas = [
     "bedConfig": {
       "double_beds": 5,
       "single_beds": 0,
-      "extra_mattresses": 4,
-      "summary": "5 Giường đôi lớn + 4 Nệm dự phòng"
+      "extra_mattresses": 10,
+      "summary": "5 Giường đôi lớn + 10 Nệm dự phòng"
     },
     "images": [
       "https://cf.bstatic.com/xdata/images/hotel/max1024x768/855399641.webp?k=24b9c9f499e90fb395031704fae5318dc9b2570d6071b369921457fada7365d8&o=",
@@ -1557,8 +1557,8 @@ export const mockVillas = [
     "bedConfig": {
       "double_beds": 5,
       "single_beds": 0,
-      "extra_mattresses": 4,
-      "summary": "5 Giường đôi lớn + 4 Nệm dự phòng"
+      "extra_mattresses": 10,
+      "summary": "5 Giường đôi lớn + 10 Nệm dự phòng"
     },
     "images": [
       "https://cf.bstatic.com/xdata/images/hotel/max1024x768/663548416.jpg?k=ff59387a369ec037d2fde52c7f0793bb6cb1f6bb0f78fb78ecb58a57d7b77f1c&o=",
@@ -1607,8 +1607,8 @@ export const mockVillas = [
     "bedConfig": {
       "double_beds": 5,
       "single_beds": 0,
-      "extra_mattresses": 4,
-      "summary": "5 Giường đôi lớn + 4 Nệm dự phòng"
+      "extra_mattresses": 10,
+      "summary": "5 Giường đôi lớn + 10 Nệm dự phòng"
     },
     "images": [
       "https://cf.bstatic.com/xdata/images/hotel/max1024x768/590833796.jpg?k=f3e6e219ed28e9319d38dd06e74c51b81fe8097f1e35f1d382148d06b3046919&o=",
@@ -1657,8 +1657,8 @@ export const mockVillas = [
     "bedConfig": {
       "double_beds": 5,
       "single_beds": 0,
-      "extra_mattresses": 4,
-      "summary": "5 Giường đôi lớn + 4 Nệm dự phòng"
+      "extra_mattresses": 10,
+      "summary": "5 Giường đôi lớn + 10 Nệm dự phòng"
     },
     "images": [
       "https://cf.bstatic.com/xdata/images/hotel/max1024x768/569385026.jpg?k=bb51c1903ed55364cf416e4f34180a4c2fa55088f5b384400da6ef6f39b23509&o=",
@@ -1707,8 +1707,8 @@ export const mockVillas = [
     "bedConfig": {
       "double_beds": 5,
       "single_beds": 0,
-      "extra_mattresses": 4,
-      "summary": "5 Giường đôi lớn + 4 Nệm dự phòng"
+      "extra_mattresses": 10,
+      "summary": "5 Giường đôi lớn + 10 Nệm dự phòng"
     },
     "images": [
       "https://cf.bstatic.com/xdata/images/hotel/max1024x768/625572884.jpg?k=969923c63e5cc2dcdeb194e79adac9c8ca6fd6776de3530aad153a5b0212a96c&o=",
@@ -1756,8 +1756,8 @@ export const mockVillas = [
     "bedConfig": {
       "double_beds": 5,
       "single_beds": 0,
-      "extra_mattresses": 4,
-      "summary": "5 Giường đôi lớn + 4 Nệm dự phòng"
+      "extra_mattresses": 10,
+      "summary": "5 Giường đôi lớn + 10 Nệm dự phòng"
     },
     "images": [
       "https://cf.bstatic.com/xdata/images/hotel/max1024x768/336167577.jpg?k=e35922701eeaeaf0464cada91d08490d05b9dc40b83a753de03f6a96070e2a83&o=",
@@ -1806,8 +1806,8 @@ export const mockVillas = [
     "bedConfig": {
       "double_beds": 5,
       "single_beds": 0,
-      "extra_mattresses": 4,
-      "summary": "5 Giường đôi lớn + 4 Nệm dự phòng"
+      "extra_mattresses": 10,
+      "summary": "5 Giường đôi lớn + 10 Nệm dự phòng"
     },
     "images": [
       "https://cf.bstatic.com/xdata/images/hotel/max1024x768/869381134.jpg?k=b8de572a22992cce266b06e41fe84bcee86bc7bd388083e92354915a52332607&o=",
@@ -1856,8 +1856,8 @@ export const mockVillas = [
     "bedConfig": {
       "double_beds": 5,
       "single_beds": 0,
-      "extra_mattresses": 4,
-      "summary": "5 Giường đôi lớn + 4 Nệm dự phòng"
+      "extra_mattresses": 10,
+      "summary": "5 Giường đôi lớn + 10 Nệm dự phòng"
     },
     "images": [
       "https://cf.bstatic.com/xdata/images/hotel/max1024x768/823635762.jpg?k=9d1d02ffa1c9649d9ef9bfc84fe0f186998c74a54a37b7a68a85967d104723c1&o=",
@@ -1906,8 +1906,8 @@ export const mockVillas = [
     "bedConfig": {
       "double_beds": 5,
       "single_beds": 0,
-      "extra_mattresses": 4,
-      "summary": "5 Giường đôi lớn + 4 Nệm dự phòng"
+      "extra_mattresses": 10,
+      "summary": "5 Giường đôi lớn + 10 Nệm dự phòng"
     },
     "images": [
       "https://cf.bstatic.com/xdata/images/hotel/max1024x768/638189844.jpg?k=1fe0252a693e266aed051d3dc582282abe50538d42eb6bc4b73f2550fbc81348&o=",
@@ -1956,8 +1956,8 @@ export const mockVillas = [
     "bedConfig": {
       "double_beds": 5,
       "single_beds": 0,
-      "extra_mattresses": 4,
-      "summary": "5 Giường đôi lớn + 4 Nệm dự phòng"
+      "extra_mattresses": 10,
+      "summary": "5 Giường đôi lớn + 10 Nệm dự phòng"
     },
     "images": [
       "https://cf.bstatic.com/xdata/images/hotel/max1024x768/855399641.webp?k=24b9c9f499e90fb395031704fae5318dc9b2570d6071b369921457fada7365d8&o=",
@@ -2006,8 +2006,8 @@ export const mockVillas = [
     "bedConfig": {
       "double_beds": 5,
       "single_beds": 0,
-      "extra_mattresses": 4,
-      "summary": "5 Giường đôi lớn + 4 Nệm dự phòng"
+      "extra_mattresses": 10,
+      "summary": "5 Giường đôi lớn + 10 Nệm dự phòng"
     },
     "images": [
       "https://cf.bstatic.com/xdata/images/hotel/max1024x768/612502313.jpg?k=f8562a209cabbf17a03b7e0e7127af8b662e58e8e24dedf6aa4072b81a810be7&o=",
@@ -2056,8 +2056,8 @@ export const mockVillas = [
     "bedConfig": {
       "double_beds": 5,
       "single_beds": 0,
-      "extra_mattresses": 4,
-      "summary": "5 Giường đôi lớn + 4 Nệm dự phòng"
+      "extra_mattresses": 10,
+      "summary": "5 Giường đôi lớn + 10 Nệm dự phòng"
     },
     "images": [
       "https://cf.bstatic.com/xdata/images/hotel/max1024x768/770719513.jpg?k=251851c2cba529e6edace746ee710069d3b148c90444249538b63397a9b018c6&o=",
@@ -2106,8 +2106,8 @@ export const mockVillas = [
     "bedConfig": {
       "double_beds": 5,
       "single_beds": 0,
-      "extra_mattresses": 4,
-      "summary": "5 Giường đôi lớn + 4 Nệm dự phòng"
+      "extra_mattresses": 10,
+      "summary": "5 Giường đôi lớn + 10 Nệm dự phòng"
     },
     "images": [
       "https://cf.bstatic.com/xdata/images/hotel/max1024x768/614764873.jpg?k=35d976bc063601a0c73e981c237d96a8c48f8760be0e96324ca9da6883286310&o=",
@@ -2156,8 +2156,8 @@ export const mockVillas = [
     "bedConfig": {
       "double_beds": 5,
       "single_beds": 0,
-      "extra_mattresses": 4,
-      "summary": "5 Giường đôi lớn + 4 Nệm dự phòng"
+      "extra_mattresses": 10,
+      "summary": "5 Giường đôi lớn + 10 Nệm dự phòng"
     },
     "images": [
       "https://cf.bstatic.com/xdata/images/hotel/max1024x768/461654970.jpg?k=a42c68ec25bba380299b9d1692161ccb97623cfaa9cecab94ffcf7696503ae28&o=",
@@ -2206,8 +2206,8 @@ export const mockVillas = [
     "bedConfig": {
       "double_beds": 5,
       "single_beds": 0,
-      "extra_mattresses": 4,
-      "summary": "5 Giường đôi lớn + 4 Nệm dự phòng"
+      "extra_mattresses": 10,
+      "summary": "5 Giường đôi lớn + 10 Nệm dự phòng"
     },
     "images": [
       "https://cf.bstatic.com/xdata/images/hotel/max1024x768/402480991.jpg?k=882a60a965c81186bae619665f236b55c08f76118444a1344c4a43b7e235bd57&o=",
@@ -2256,8 +2256,8 @@ export const mockVillas = [
     "bedConfig": {
       "double_beds": 5,
       "single_beds": 0,
-      "extra_mattresses": 4,
-      "summary": "5 Giường đôi lớn + 4 Nệm dự phòng"
+      "extra_mattresses": 10,
+      "summary": "5 Giường đôi lớn + 10 Nệm dự phòng"
     },
     "images": [
       "https://cf.bstatic.com/xdata/images/hotel/max1024x768/635215847.jpg?k=958975874349aa47ea56680ef727ad6aa0c2a0608722cd77054b719b62f4894c&o=",
@@ -2305,8 +2305,8 @@ export const mockVillas = [
     "bedConfig": {
       "double_beds": 5,
       "single_beds": 0,
-      "extra_mattresses": 4,
-      "summary": "5 Giường đôi lớn + 4 Nệm dự phòng"
+      "extra_mattresses": 10,
+      "summary": "5 Giường đôi lớn + 10 Nệm dự phòng"
     },
     "images": [
       "https://cf.bstatic.com/xdata/images/hotel/max1024x768/638482358.jpg?k=9f4b89dc4f813b5bb783d4aa42a4991e5bca7f0eb3422afa0d51c9b2a6be52d6&o=",
@@ -2355,8 +2355,8 @@ export const mockVillas = [
     "bedConfig": {
       "double_beds": 5,
       "single_beds": 0,
-      "extra_mattresses": 4,
-      "summary": "5 Giường đôi lớn + 4 Nệm dự phòng"
+      "extra_mattresses": 10,
+      "summary": "5 Giường đôi lớn + 10 Nệm dự phòng"
     },
     "images": [
       "https://cf.bstatic.com/xdata/images/hotel/max1024x768/700646458.jpg?k=4558ce75389f4585bf32c4ca85077117faa8e68153ba711f44852fdc83fdc9ca&o=",
@@ -2399,14 +2399,14 @@ export const mockVillas = [
     "location": "Bãi Sau, TP. Vũng Tàu, Bà Rịa - Vũng Tàu",
     "priceTotal": 10500000,
     "priceUnit": "căn / đêm",
-    "capacity": 40,
+    "capacity": 35,
     "bedrooms": 10,
     "bathrooms": 9,
     "bedConfig": {
       "double_beds": 10,
       "single_beds": 0,
-      "extra_mattresses": 4,
-      "summary": "10 Giường đôi lớn + 4 Nệm dự phòng"
+      "extra_mattresses": 15,
+      "summary": "10 Giường đôi lớn + 15 Nệm dự phòng"
     },
     "images": [
       "https://cf.bstatic.com/xdata/images/hotel/max1024x768/375120174.jpg?k=eb83a694bf37eb46e5670ff165fb6bfb532858c700078fa2d60939f165985874&o=",
@@ -2455,8 +2455,8 @@ export const mockVillas = [
     "bedConfig": {
       "double_beds": 5,
       "single_beds": 0,
-      "extra_mattresses": 4,
-      "summary": "5 Giường đôi lớn + 4 Nệm dự phòng"
+      "extra_mattresses": 10,
+      "summary": "5 Giường đôi lớn + 10 Nệm dự phòng"
     },
     "images": [
       "https://cf.bstatic.com/xdata/images/hotel/max1024x768/492774854.jpg?k=ce5f025ac8e74456ef22c23522d23fb823e745d5ebebbd183887d1723a449ab0&o=",

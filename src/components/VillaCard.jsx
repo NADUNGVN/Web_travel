@@ -1,10 +1,9 @@
 import React, { useState } from 'react';
-import { Bed, Bath, Star, ChevronRight } from 'lucide-react';
+import { Bed, Bath, Star, ChevronRight, Vote } from 'lucide-react';
 import { getCostPerPerson } from '../data/mockVillas';
 
 const FALLBACK_IMAGE = "https://images.unsplash.com/photo-1512915922686-57c11dde9b6b?auto=format&fit=crop&w=1000&q=80";
 
-// Shorten villa title for clean mobile card view
 export const getCleanVillaTitle = (name) => {
   if (!name) return '';
   let clean = name
@@ -12,7 +11,6 @@ export const getCleanVillaTitle = (name) => {
     .replace(/\s+/g, ' ')
     .trim();
   
-  // Truncate long descriptions
   if (clean.length > 42) {
     clean = clean.substring(0, 40) + '...';
   }
@@ -26,6 +24,10 @@ export const VillaCard = ({
 }) => {
   const [imgSrc, setImgSrc] = useState(villa.images[0] || FALLBACK_IMAGE);
   const costPerPerson = getCostPerPerson(villa.priceTotal, 20, 2);
+
+  // Calculate total votes
+  const baseVotes = (villa.votes?.yes || 0) + (villa.votes?.maybe || 0) + (villa.votes?.no || 0);
+  const totalVotesCount = userVote ? baseVotes + 1 : baseVotes;
 
   const getFitBadge = () => {
     if (villa.capacity >= 20) {
@@ -58,10 +60,32 @@ export const VillaCard = ({
           onError={() => setImgSrc(FALLBACK_IMAGE)}
         />
         
-        {/* Fit Badge */}
+        {/* Fit Badge (Top Left) */}
         {getFitBadge()}
 
-        {/* Price Badge */}
+        {/* Vote Count Badge (Top Right) */}
+        <div style={{
+          position: 'absolute',
+          top: '12px',
+          right: '12px',
+          background: 'rgba(15, 23, 42, 0.9)',
+          backdropFilter: 'blur(8px)',
+          border: '1px solid rgba(56, 189, 248, 0.4)',
+          color: '#38bdf8',
+          padding: '4px 10px',
+          borderRadius: '99px',
+          fontSize: '11px',
+          fontWeight: 800,
+          display: 'flex',
+          alignItems: 'center',
+          gap: '4px',
+          zIndex: 2,
+          boxShadow: '0 2px 8px rgba(0,0,0,0.4)'
+        }}>
+          🗳️ {totalVotesCount} đã vote
+        </div>
+
+        {/* Price Badge (Bottom Right) */}
         <div className="price-tag">
           <div className="price-main">
             ~{(costPerPerson / 1000).toLocaleString()}k <span style={{ fontSize: '10px', fontWeight: 500 }}>/người</span>
@@ -69,7 +93,7 @@ export const VillaCard = ({
         </div>
       </div>
 
-      {/* Tinh gọn thông tin thẻ */}
+      {/* Card Info */}
       <div className="card-content" style={{ padding: '12px 14px', gap: '6px' }}>
         <h3 className="card-title" style={{ fontSize: '14px', fontWeight: '700', lineHeight: 1.3 }}>
           {getCleanVillaTitle(villa.name)}
