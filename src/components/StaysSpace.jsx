@@ -129,10 +129,9 @@ export const StaysSpace = ({
         </div>
       )}
 
-      {/* Subheader Status */}
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontSize: '11px', color: '#94a3b8', padding: '0 2px' }}>
-        <span>Hiển thị <b>{filteredVillas.length}</b> villa</span>
-        <span>🟢 <b>50 căn</b> chứa đủ 20 người</span>
+      {/* Clean Status Counter */}
+      <div style={{ fontSize: '11px', color: '#94a3b8', padding: '0 2px' }}>
+        Hiển thị <b>{filteredVillas.length}</b> villa
       </div>
 
       {/* Responsive Villa Grid Container */}
