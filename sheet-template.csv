@@ -1,0 +1,2 @@
+id,name,image,price,price_unit,price_tier,location,maps_url,rating,review_count,tags,description,score_seed,yes_seed,maybe_seed,no_seed
+stay-01,Tên địa điểm,https://example.com/image.jpg,4200000,2 đêm / căn,mid,"Phường 8, Đà Lạt",https://maps.google.com/...,4.8,126,"8 khách|4 phòng|Bếp riêng|BBQ","Mô tả ngắn giúp mọi người hiểu ưu và nhược điểm.",0,0,0,0
