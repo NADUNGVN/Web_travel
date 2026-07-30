@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Bed, Bath, Star, ChevronRight, Vote } from 'lucide-react';
+import { Bed, Bath, Star, ChevronRight } from 'lucide-react';
 import { getCostPerPerson } from '../data/mockVillas';
 
 const FALLBACK_IMAGE = "https://images.unsplash.com/photo-1512915922686-57c11dde9b6b?auto=format&fit=crop&w=1000&q=80";
@@ -25,7 +25,7 @@ export const VillaCard = ({
   const [imgSrc, setImgSrc] = useState(villa.images[0] || FALLBACK_IMAGE);
   const costPerPerson = getCostPerPerson(villa.priceTotal, 20, 2);
 
-  // Calculate total votes
+  // Real Vote Counter (0 fake data)
   const baseVotes = (villa.votes?.yes || 0) + (villa.votes?.maybe || 0) + (villa.votes?.no || 0);
   const totalVotesCount = userVote ? baseVotes + 1 : baseVotes;
 
@@ -42,7 +42,7 @@ export const VillaCard = ({
     if (userVote === 'yes') return <span style={{ color: '#34d399', fontSize: '11px', fontWeight: 700 }}>🌟 Bạn đã chọn Ưu tiên</span>;
     if (userVote === 'maybe') return <span style={{ color: '#fbbf24', fontSize: '11px', fontWeight: 700 }}>🤔 Bạn đang Cân nhắc</span>;
     if (userVote === 'no') return <span style={{ color: '#f87171', fontSize: '11px', fontWeight: 700 }}>❌ Không hợp</span>;
-    return <span style={{ color: '#94a3b8', fontSize: '11px' }}>Bấm để xem chi tiết & vote</span>;
+    return <span style={{ color: '#94a3b8', fontSize: '11px' }}>Chưa vote • Bấm để xem & vote</span>;
   };
 
   return (
@@ -63,15 +63,15 @@ export const VillaCard = ({
         {/* Fit Badge (Top Left) */}
         {getFitBadge()}
 
-        {/* Vote Count Badge (Top Right) */}
+        {/* Real Vote Count Badge (Top Right) */}
         <div style={{
           position: 'absolute',
           top: '12px',
           right: '12px',
-          background: 'rgba(15, 23, 42, 0.9)',
+          background: totalVotesCount > 0 ? 'rgba(16, 185, 129, 0.9)' : 'rgba(15, 23, 42, 0.85)',
           backdropFilter: 'blur(8px)',
-          border: '1px solid rgba(56, 189, 248, 0.4)',
-          color: '#38bdf8',
+          border: `1px solid ${totalVotesCount > 0 ? '#34d399' : 'rgba(255, 255, 255, 0.15)'}`,
+          color: totalVotesCount > 0 ? '#white' : '#94a3b8',
           padding: '4px 10px',
           borderRadius: '99px',
           fontSize: '11px',

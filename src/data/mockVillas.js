@@ -1,4 +1,4 @@
-// Tự động kiểm tra & chuẩn hóa số lượng phòng ngủ, nhà vệ sinh và sức chứa chuẩn 100%
+// Reset toàn bộ lượt vote về 0 thực tế (Không dùng vote giả lập)
 export const mockVillas = [
   {
     "id": "stay-01",
@@ -42,9 +42,9 @@ export const mockVillas = [
     "groupFit": "perfect",
     "description": "Villa Villa Vũng Tàu Đi Bộ Ra Biển Gần Cột Cờ Bãi Sau - 160 HHT, Vũng Tàu cao cấp tại Vũng Tàu. Cấu hình 5 giường đôi + 4 nệm dự phòng. Đầy đủ Hồ bơi riêng tràn bờ, Sân nướng BBQ, Bàn Bi-a phăng.",
     "votes": {
-      "yes": 13,
-      "maybe": 4,
-      "no": 1
+      "yes": 0,
+      "maybe": 0,
+      "no": 0
     },
     "lat": 10.34567,
     "lng": 107.0853,
@@ -92,8 +92,8 @@ export const mockVillas = [
     "groupFit": "perfect",
     "description": "Villa Palm Villa 09 - Biệt Thự Đồi Ngọc Tước Vũng Tàu gần biển, Vũng Tàu cao cấp tại Vũng Tàu. Cấu hình 5 giường đôi + 4 nệm dự phòng. Đầy đủ Hồ bơi riêng tràn bờ, Sân nướng BBQ, Bàn Bi-a phăng.",
     "votes": {
-      "yes": 14,
-      "maybe": 5,
+      "yes": 0,
+      "maybe": 0,
       "no": 0
     },
     "lat": 10.3442,
@@ -141,9 +141,9 @@ export const mockVillas = [
     "groupFit": "perfect",
     "description": "Villa Palm Villa 23 (Beachfront Pool Villa Vung Tau with an Ocean view and Karaoke, Billards), Vũng Tàu cao cấp tại Vũng Tàu. Cấu hình 5 giường đôi + 4 nệm dự phòng. Đầy đủ Hồ bơi riêng tràn bờ, Loa Karaoke âm thanh vòm, Gần biển Bãi Sau (Đi bộ 2 phút).",
     "votes": {
-      "yes": 15,
-      "maybe": 6,
-      "no": 1
+      "yes": 0,
+      "maybe": 0,
+      "no": 0
     },
     "lat": 10.34684,
     "lng": 107.09312,
@@ -190,8 +190,8 @@ export const mockVillas = [
     "groupFit": "perfect",
     "description": "Villa Palm Villa 22 - Ocean View 4 bedrooms - bida - bbq, Vũng Tàu cao cấp tại Vũng Tàu. Cấu hình 4 giường đôi + 2 nệm dự phòng. Đầy đủ Bàn Bi-a phăng cao cấp, Sân nướng BBQ ngoài trời, Gần biển Bãi Sau (Đi bộ 2 phút).",
     "votes": {
-      "yes": 16,
-      "maybe": 3,
+      "yes": 0,
+      "maybe": 0,
       "no": 0
     },
     "lat": 10.34871,
@@ -239,9 +239,9 @@ export const mockVillas = [
     "groupFit": "perfect",
     "description": "Villa Cối Xoay Gió Trệt Không Lầu - 6 Phòng Ngủ - Bida - Karaoke Phòng Lạnh - Gần Biển Bãi Sau Vũng Tàu, Vũng Tàu cao cấp tại Vũng Tàu. Cấu hình 6 giường đôi + 4 nệm dự phòng. Đầy đủ Bàn Bi-a phăng cao cấp, Loa Karaoke âm thanh vòm, Gần biển Bãi Sau (Đi bộ 2 phút).",
     "votes": {
-      "yes": 17,
-      "maybe": 4,
-      "no": 1
+      "yes": 0,
+      "maybe": 0,
+      "no": 0
     },
     "lat": 10.34306,
     "lng": 107.08536,
@@ -289,8 +289,8 @@ export const mockVillas = [
     "groupFit": "perfect",
     "description": "Villa Palm Villa 21 - Beachfront 5 Phòng Ngủ Biệt Thự Trên Bãi Biển, Vũng Tàu cao cấp tại Vũng Tàu. Cấu hình 5 giường đôi + 4 nệm dự phòng. Đầy đủ Hồ bơi riêng tràn bờ, Sân nướng BBQ, Bàn Bi-a phăng.",
     "votes": {
-      "yes": 12,
-      "maybe": 5,
+      "yes": 0,
+      "maybe": 0,
       "no": 0
     },
     "lat": 10.34062,
@@ -339,9 +339,9 @@ export const mockVillas = [
     "groupFit": "perfect",
     "description": "Villa Palm Villa 38 : 5 Bedroom Bida Aria resort, Vũng Tàu cao cấp tại Vũng Tàu. Cấu hình 5 giường đôi + 4 nệm dự phòng. Đầy đủ Hồ bơi riêng tràn bờ, Sân nướng BBQ, Bàn Bi-a phăng.",
     "votes": {
-      "yes": 13,
-      "maybe": 6,
-      "no": 1
+      "yes": 0,
+      "maybe": 0,
+      "no": 0
     },
     "lat": 10.36827,
     "lng": 107.11399,
@@ -389,8 +389,8 @@ export const mockVillas = [
     "groupFit": "perfect",
     "description": "Villa Villa Hồ Bơi Bãi Sau - Free Loa Kéo + Bida - Gần Biển - 10/11B LLQ, Vũng Tàu cao cấp tại Vũng Tàu. Cấu hình 5 giường đôi + 4 nệm dự phòng. Đầy đủ Hồ bơi riêng tràn bờ, Bàn Bi-a phăng cao cấp, Loa Karaoke âm thanh vòm.",
     "votes": {
-      "yes": 14,
-      "maybe": 3,
+      "yes": 0,
+      "maybe": 0,
       "no": 0
     },
     "lat": 10.3458,
@@ -439,9 +439,9 @@ export const mockVillas = [
     "groupFit": "perfect",
     "description": "Villa Villa Candle In The Wind - Gần Bãi Sau Vũng Tàu, Vũng Tàu cao cấp tại Vũng Tàu. Cấu hình 5 giường đôi + 4 nệm dự phòng. Đầy đủ Hồ bơi riêng tràn bờ, Sân nướng BBQ, Bàn Bi-a phăng.",
     "votes": {
-      "yes": 15,
-      "maybe": 4,
-      "no": 1
+      "yes": 0,
+      "maybe": 0,
+      "no": 0
     },
     "lat": 10.34065,
     "lng": 107.09207,
@@ -489,8 +489,8 @@ export const mockVillas = [
     "groupFit": "perfect",
     "description": "Villa Villa Long Cung B234, Vũng Tàu cao cấp tại Vũng Tàu. Cấu hình 5 giường đôi + 4 nệm dự phòng. Đầy đủ Hồ bơi riêng tràn bờ, Sân nướng BBQ, Bàn Bi-a phăng.",
     "votes": {
-      "yes": 16,
-      "maybe": 5,
+      "yes": 0,
+      "maybe": 0,
       "no": 0
     },
     "lat": 10.37609,
@@ -539,9 +539,9 @@ export const mockVillas = [
     "groupFit": "perfect",
     "description": "Villa Villa 16 NH - Đi Bộ Ra Biển Thùy Vân 200 Met - Free Bida - Phòng Karaoke - Xông Hơi, Vũng Tàu cao cấp tại Vũng Tàu. Cấu hình 5 giường đôi + 4 nệm dự phòng. Đầy đủ Bàn Bi-a phăng cao cấp, Loa Karaoke âm thanh vòm, Gần biển Bãi Sau (Đi bộ 2 phút).",
     "votes": {
-      "yes": 17,
-      "maybe": 6,
-      "no": 1
+      "yes": 0,
+      "maybe": 0,
+      "no": 0
     },
     "lat": 10.34767,
     "lng": 107.09338,
@@ -589,8 +589,8 @@ export const mockVillas = [
     "groupFit": "perfect",
     "description": "Villa Villa 5 Lạc Long Quân - Bãi Sau, Vũng Tàu cao cấp tại Vũng Tàu. Cấu hình 5 giường đôi + 4 nệm dự phòng. Đầy đủ Hồ bơi riêng tràn bờ, Sân nướng BBQ, Bàn Bi-a phăng.",
     "votes": {
-      "yes": 12,
-      "maybe": 3,
+      "yes": 0,
+      "maybe": 0,
       "no": 0
     },
     "lat": 10.34472,
@@ -639,9 +639,9 @@ export const mockVillas = [
     "groupFit": "perfect",
     "description": "Villa Sunflower Villa - Free Bida - Phòng Karaoke - Có Thang Máy - 10 Phòng Ngủ - Gần Biển, Vũng Tàu cao cấp tại Vũng Tàu. Cấu hình 10 giường đôi + 4 nệm dự phòng. Đầy đủ Bàn Bi-a phăng cao cấp, Loa Karaoke âm thanh vòm, Gần biển Bãi Sau (Đi bộ 2 phút).",
     "votes": {
-      "yes": 13,
-      "maybe": 4,
-      "no": 1
+      "yes": 0,
+      "maybe": 0,
+      "no": 0
     },
     "lat": 10.34949,
     "lng": 107.08904,
@@ -689,8 +689,8 @@ export const mockVillas = [
     "groupFit": "perfect",
     "description": "Villa Villa 28C - Hồ Bơi Vũng Tàu Gần Biển Free Karaoke - Bida, Vũng Tàu cao cấp tại Vũng Tàu. Cấu hình 5 giường đôi + 4 nệm dự phòng. Đầy đủ Hồ bơi riêng tràn bờ, Bàn Bi-a phăng cao cấp, Loa Karaoke âm thanh vòm.",
     "votes": {
-      "yes": 14,
-      "maybe": 5,
+      "yes": 0,
+      "maybe": 0,
       "no": 0
     },
     "lat": 10.33911,
@@ -739,9 +739,9 @@ export const mockVillas = [
     "groupFit": "perfect",
     "description": "Villa AN Village 1, Vũng Tàu cao cấp tại Vũng Tàu. Cấu hình 5 giường đôi + 4 nệm dự phòng. Đầy đủ Hồ bơi riêng tràn bờ, Sân nướng BBQ, Bàn Bi-a phăng.",
     "votes": {
-      "yes": 15,
-      "maybe": 6,
-      "no": 1
+      "yes": 0,
+      "maybe": 0,
+      "no": 0
     },
     "lat": 10.34817,
     "lng": 107.09224,
@@ -789,8 +789,8 @@ export const mockVillas = [
     "groupFit": "perfect",
     "description": "Villa Tuyệt Phẩm Villa View Thành Phố, Vũng Tàu cao cấp tại Vũng Tàu. Cấu hình 5 giường đôi + 4 nệm dự phòng. Đầy đủ Hồ bơi riêng tràn bờ, Sân nướng BBQ, Bàn Bi-a phăng.",
     "votes": {
-      "yes": 16,
-      "maybe": 3,
+      "yes": 0,
+      "maybe": 0,
       "no": 0
     },
     "lat": 10.34769,
@@ -839,9 +839,9 @@ export const mockVillas = [
     "groupFit": "perfect",
     "description": "Villa AnNam Village, Vũng Tàu cao cấp tại Vũng Tàu. Cấu hình 5 giường đôi + 4 nệm dự phòng. Đầy đủ Hồ bơi riêng tràn bờ, Sân nướng BBQ, Bàn Bi-a phăng.",
     "votes": {
-      "yes": 17,
-      "maybe": 4,
-      "no": 1
+      "yes": 0,
+      "maybe": 0,
+      "no": 0
     },
     "lat": 10.34443,
     "lng": 107.09668,
@@ -888,8 +888,8 @@ export const mockVillas = [
     "groupFit": "perfect",
     "description": "Villa Sea Villa 13 NH - Đi Bộ Ra Biển 100 Met - Bida - Karaoke, Vũng Tàu cao cấp tại Vũng Tàu. Cấu hình 5 giường đôi + 4 nệm dự phòng. Đầy đủ Bàn Bi-a phăng cao cấp, Loa Karaoke âm thanh vòm, Gần biển Bãi Sau (Đi bộ 2 phút).",
     "votes": {
-      "yes": 12,
-      "maybe": 5,
+      "yes": 0,
+      "maybe": 0,
       "no": 0
     },
     "lat": 10.34254,
@@ -938,9 +938,9 @@ export const mockVillas = [
     "groupFit": "perfect",
     "description": "Villa Villa Không Lầu 5 Phòng Ngủ - Phan Chu Trinh, Vũng Tàu cao cấp tại Vũng Tàu. Cấu hình 5 giường đôi + 4 nệm dự phòng. Đầy đủ Hồ bơi riêng tràn bờ, Sân nướng BBQ, Bàn Bi-a phăng.",
     "votes": {
-      "yes": 13,
-      "maybe": 6,
-      "no": 1
+      "yes": 0,
+      "maybe": 0,
+      "no": 0
     },
     "lat": 10.34795,
     "lng": 107.09242,
@@ -988,8 +988,8 @@ export const mockVillas = [
     "groupFit": "perfect",
     "description": "Villa Wabi Sabi Villa * Hồ Bơi Thác Nước 140 m2 * Phòng Karaoke Thủy Cung, Vũng Tàu cao cấp tại Vũng Tàu. Cấu hình 5 giường đôi + 4 nệm dự phòng. Đầy đủ Hồ bơi riêng tràn bờ, Sân nướng BBQ, Bàn Bi-a phăng.",
     "votes": {
-      "yes": 14,
-      "maybe": 3,
+      "yes": 0,
+      "maybe": 0,
       "no": 0
     },
     "lat": 10.34834,
@@ -1038,9 +1038,9 @@ export const mockVillas = [
     "groupFit": "perfect",
     "description": "Villa Nalie Villa - 196 Phan Chu Trinh, Vũng Tàu cao cấp tại Vũng Tàu. Cấu hình 5 giường đôi + 4 nệm dự phòng. Đầy đủ Hồ bơi riêng tràn bờ, Sân nướng BBQ, Bàn Bi-a phăng.",
     "votes": {
-      "yes": 15,
-      "maybe": 4,
-      "no": 1
+      "yes": 0,
+      "maybe": 0,
+      "no": 0
     },
     "lat": 10.34645,
     "lng": 107.08555,
@@ -1088,8 +1088,8 @@ export const mockVillas = [
     "groupFit": "perfect",
     "description": "Villa OCEAN HOUSE - Đi Bộ 100 Met Ra Biển Bãi Sau Thùy Vân, Vũng Tàu cao cấp tại Vũng Tàu. Cấu hình 5 giường đôi + 4 nệm dự phòng. Đầy đủ Hồ bơi riêng tràn bờ, Sân nướng BBQ, Bàn Bi-a phăng.",
     "votes": {
-      "yes": 16,
-      "maybe": 5,
+      "yes": 0,
+      "maybe": 0,
       "no": 0
     },
     "lat": 10.34073,
@@ -1138,9 +1138,9 @@ export const mockVillas = [
     "groupFit": "perfect",
     "description": "Villa Sunday Villa 14 - Đi Bộ Ra Biển Bãi Sau 200 Met, Vũng Tàu cao cấp tại Vũng Tàu. Cấu hình 5 giường đôi + 4 nệm dự phòng. Đầy đủ Hồ bơi riêng tràn bờ, Sân nướng BBQ, Bàn Bi-a phăng.",
     "votes": {
-      "yes": 17,
-      "maybe": 6,
-      "no": 1
+      "yes": 0,
+      "maybe": 0,
+      "no": 0
     },
     "lat": 10.33896,
     "lng": 107.08779,
@@ -1187,8 +1187,8 @@ export const mockVillas = [
     "groupFit": "perfect",
     "description": "Villa Villa 91 VTS - Gần Biển Thùy Vân - Sân Rộng Đãi Tiệc - BIDA - KARAOKE FREE, Vũng Tàu cao cấp tại Vũng Tàu. Cấu hình 5 giường đôi + 4 nệm dự phòng. Đầy đủ Bàn Bi-a phăng cao cấp, Loa Karaoke âm thanh vòm, Gần biển Bãi Sau (Đi bộ 2 phút).",
     "votes": {
-      "yes": 12,
-      "maybe": 3,
+      "yes": 0,
+      "maybe": 0,
       "no": 0
     },
     "lat": 10.33921,
@@ -1237,9 +1237,9 @@ export const mockVillas = [
     "groupFit": "perfect",
     "description": "Villa 4PN Ban Công Sân Vườn Tòa Oasky ngay Tháp Tam Thắng, Vũng Tàu cao cấp tại Vũng Tàu. Cấu hình 4 giường đôi + 2 nệm dự phòng. Đầy đủ Hồ bơi riêng tràn bờ, Sân nướng BBQ, Bàn Bi-a phăng.",
     "votes": {
-      "yes": 13,
-      "maybe": 4,
-      "no": 1
+      "yes": 0,
+      "maybe": 0,
+      "no": 0
     },
     "lat": 10.34563,
     "lng": 107.08938,
@@ -1287,8 +1287,8 @@ export const mockVillas = [
     "groupFit": "perfect",
     "description": "Villa 45-1 Thùy Vân - Cách Biển Bãi Sau 100 met - Bida - Karaoke, Vũng Tàu cao cấp tại Vũng Tàu. Cấu hình 5 giường đôi + 4 nệm dự phòng. Đầy đủ Hồ bơi riêng tràn bờ, Sân nướng BBQ, Bàn Bi-a phăng.",
     "votes": {
-      "yes": 14,
-      "maybe": 5,
+      "yes": 0,
+      "maybe": 0,
       "no": 0
     },
     "lat": 10.34244,
@@ -1337,9 +1337,9 @@ export const mockVillas = [
     "groupFit": "perfect",
     "description": "Villa Sun Villa 168 - 7 Phòng Ngủ - Gần Biển Bãi Sau, Vũng Tàu cao cấp tại Vũng Tàu. Cấu hình 7 giường đôi + 4 nệm dự phòng. Đầy đủ Hồ bơi riêng tràn bờ, Sân nướng BBQ, Bàn Bi-a phăng.",
     "votes": {
-      "yes": 15,
-      "maybe": 6,
-      "no": 1
+      "yes": 0,
+      "maybe": 0,
+      "no": 0
     },
     "lat": 10.3412,
     "lng": 107.09624,
@@ -1387,8 +1387,8 @@ export const mockVillas = [
     "groupFit": "perfect",
     "description": "Villa Villa VTS - Gần Biển Thùy Vân - Free Karaoke, Vũng Tàu cao cấp tại Vũng Tàu. Cấu hình 5 giường đôi + 4 nệm dự phòng. Đầy đủ Hồ bơi riêng tràn bờ, Sân nướng BBQ, Bàn Bi-a phăng.",
     "votes": {
-      "yes": 16,
-      "maybe": 3,
+      "yes": 0,
+      "maybe": 0,
       "no": 0
     },
     "lat": 10.34578,
@@ -1437,9 +1437,9 @@ export const mockVillas = [
     "groupFit": "perfect",
     "description": "Villa Sun Villa Resort Mini - Trệt Không Lầu - Full Giải Trí, Vũng Tàu cao cấp tại Vũng Tàu. Cấu hình 5 giường đôi + 4 nệm dự phòng. Đầy đủ Hồ bơi riêng tràn bờ, Sân nướng BBQ, Bàn Bi-a phăng.",
     "votes": {
-      "yes": 17,
-      "maybe": 4,
-      "no": 1
+      "yes": 0,
+      "maybe": 0,
+      "no": 0
     },
     "lat": 10.34005,
     "lng": 107.09375,
@@ -1487,8 +1487,8 @@ export const mockVillas = [
     "groupFit": "perfect",
     "description": "Villa Casa Blanca - Villa Hồ Bơi Vũng Tàu Gần Cột Cờ Bãi Sau - 5 Phòng Ngủ, Vũng Tàu cao cấp tại Vũng Tàu. Cấu hình 5 giường đôi + 4 nệm dự phòng. Đầy đủ Hồ bơi riêng tràn bờ, Sân nướng BBQ, Bàn Bi-a phăng.",
     "votes": {
-      "yes": 12,
-      "maybe": 5,
+      "yes": 0,
+      "maybe": 0,
       "no": 0
     },
     "lat": 10.33996,
@@ -1537,9 +1537,9 @@ export const mockVillas = [
     "groupFit": "perfect",
     "description": "Villa P Villa 159 VTS - Villa Hồ Bơi Gần Biển Bãi Sau Vũng Tàu, Vũng Tàu cao cấp tại Vũng Tàu. Cấu hình 5 giường đôi + 4 nệm dự phòng. Đầy đủ Hồ bơi riêng tràn bờ, Sân nướng BBQ, Bàn Bi-a phăng.",
     "votes": {
-      "yes": 13,
-      "maybe": 6,
-      "no": 1
+      "yes": 0,
+      "maybe": 0,
+      "no": 0
     },
     "lat": 10.34987,
     "lng": 107.09268,
@@ -1587,8 +1587,8 @@ export const mockVillas = [
     "groupFit": "perfect",
     "description": "Villa Blue Sea Villa Vung Tau, Vũng Tàu cao cấp tại Vũng Tàu. Cấu hình 5 giường đôi + 4 nệm dự phòng. Đầy đủ Hồ bơi riêng tràn bờ, Sân nướng BBQ, Bàn Bi-a phăng.",
     "votes": {
-      "yes": 14,
-      "maybe": 3,
+      "yes": 0,
+      "maybe": 0,
       "no": 0
     },
     "lat": 10.34468,
@@ -1637,9 +1637,9 @@ export const mockVillas = [
     "groupFit": "perfect",
     "description": "Villa Villa 50M To Beach - Room Karaoke Free, Vũng Tàu cao cấp tại Vũng Tàu. Cấu hình 5 giường đôi + 4 nệm dự phòng. Đầy đủ Hồ bơi riêng tràn bờ, Sân nướng BBQ, Bàn Bi-a phăng.",
     "votes": {
-      "yes": 15,
-      "maybe": 4,
-      "no": 1
+      "yes": 0,
+      "maybe": 0,
+      "no": 0
     },
     "lat": 10.34811,
     "lng": 107.09431,
@@ -1687,8 +1687,8 @@ export const mockVillas = [
     "groupFit": "perfect",
     "description": "Villa Villa 68 Hạ Long - View Biển - Đi Bộ Ra Biển - Phòng Karaoke Máy Lạnh, Vũng Tàu cao cấp tại Vũng Tàu. Cấu hình 5 giường đôi + 4 nệm dự phòng. Đầy đủ Hồ bơi riêng tràn bờ, Sân nướng BBQ, Bàn Bi-a phăng.",
     "votes": {
-      "yes": 16,
-      "maybe": 5,
+      "yes": 0,
+      "maybe": 0,
       "no": 0
     },
     "lat": 10.35344,
@@ -1736,9 +1736,9 @@ export const mockVillas = [
     "groupFit": "perfect",
     "description": "Villa C29 Đi Bộ Ra Biển - Trệt Không Lầu - Free Bida - Loa Karaoke, Vũng Tàu cao cấp tại Vũng Tàu. Cấu hình 5 giường đôi + 4 nệm dự phòng. Đầy đủ Bàn Bi-a phăng cao cấp, Loa Karaoke âm thanh vòm, Gần biển Bãi Sau (Đi bộ 2 phút).",
     "votes": {
-      "yes": 17,
-      "maybe": 6,
-      "no": 1
+      "yes": 0,
+      "maybe": 0,
+      "no": 0
     },
     "lat": 10.34179,
     "lng": 107.08821,
@@ -1786,8 +1786,8 @@ export const mockVillas = [
     "groupFit": "perfect",
     "description": "Villa Hoàng My Villa Bãi Sau, Vũng Tàu cao cấp tại Vũng Tàu. Cấu hình 5 giường đôi + 4 nệm dự phòng. Đầy đủ Hồ bơi riêng tràn bờ, Sân nướng BBQ, Bàn Bi-a phăng.",
     "votes": {
-      "yes": 12,
-      "maybe": 3,
+      "yes": 0,
+      "maybe": 0,
       "no": 0
     },
     "lat": 10.34053,
@@ -1836,9 +1836,9 @@ export const mockVillas = [
     "groupFit": "perfect",
     "description": "Villa Victory Villa O3, Vũng Tàu cao cấp tại Vũng Tàu. Cấu hình 5 giường đôi + 4 nệm dự phòng. Đầy đủ Hồ bơi riêng tràn bờ, Sân nướng BBQ, Bàn Bi-a phăng.",
     "votes": {
-      "yes": 13,
-      "maybe": 4,
-      "no": 1
+      "yes": 0,
+      "maybe": 0,
+      "no": 0
     },
     "lat": 10.34852,
     "lng": 107.08878,
@@ -1886,8 +1886,8 @@ export const mockVillas = [
     "groupFit": "perfect",
     "description": "Villa AnNam Village 4, Vũng Tàu cao cấp tại Vũng Tàu. Cấu hình 5 giường đôi + 4 nệm dự phòng. Đầy đủ Hồ bơi riêng tràn bờ, Sân nướng BBQ, Bàn Bi-a phăng.",
     "votes": {
-      "yes": 14,
-      "maybe": 5,
+      "yes": 0,
+      "maybe": 0,
       "no": 0
     },
     "lat": 10.34587,
@@ -1936,9 +1936,9 @@ export const mockVillas = [
     "groupFit": "perfect",
     "description": "Villa AN Village 2, Vũng Tàu cao cấp tại Vũng Tàu. Cấu hình 5 giường đôi + 4 nệm dự phòng. Đầy đủ Hồ bơi riêng tràn bờ, Sân nướng BBQ, Bàn Bi-a phăng.",
     "votes": {
-      "yes": 15,
-      "maybe": 6,
-      "no": 1
+      "yes": 0,
+      "maybe": 0,
+      "no": 0
     },
     "lat": 10.34897,
     "lng": 107.09051,
@@ -1986,8 +1986,8 @@ export const mockVillas = [
     "groupFit": "perfect",
     "description": "Villa Villa Lô B26 Lạc Long Quân Vũng Tàu, Vũng Tàu cao cấp tại Vũng Tàu. Cấu hình 5 giường đôi + 4 nệm dự phòng. Đầy đủ Hồ bơi riêng tràn bờ, Sân nướng BBQ, Bàn Bi-a phăng.",
     "votes": {
-      "yes": 16,
-      "maybe": 3,
+      "yes": 0,
+      "maybe": 0,
       "no": 0
     },
     "lat": 10.34412,
@@ -2036,9 +2036,9 @@ export const mockVillas = [
     "groupFit": "perfect",
     "description": "Villa Sea Villa 52 VTS - Gần Cột Cờ Bãi Sau - Free Bida - Loa Karaoke, Vũng Tàu cao cấp tại Vũng Tàu. Cấu hình 5 giường đôi + 4 nệm dự phòng. Đầy đủ Hồ bơi riêng tràn bờ, Sân nướng BBQ, Bàn Bi-a phăng.",
     "votes": {
-      "yes": 17,
-      "maybe": 4,
-      "no": 1
+      "yes": 0,
+      "maybe": 0,
+      "no": 0
     },
     "lat": 10.34474,
     "lng": 107.08815,
@@ -2086,8 +2086,8 @@ export const mockVillas = [
     "groupFit": "perfect",
     "description": "Villa Villa Sát Biển View Biển Vũng Tàu - 109 Trần Phú, Vũng Tàu cao cấp tại Vũng Tàu. Cấu hình 5 giường đôi + 4 nệm dự phòng. Đầy đủ Hồ bơi riêng tràn bờ, Sân nướng BBQ, Bàn Bi-a phăng.",
     "votes": {
-      "yes": 12,
-      "maybe": 5,
+      "yes": 0,
+      "maybe": 0,
       "no": 0
     },
     "lat": 10.35877,
@@ -2136,9 +2136,9 @@ export const mockVillas = [
     "groupFit": "perfect",
     "description": "Villa Sun Villa 14 - Free Bida - Karaoke - Đi Bộ Ra Bãi Thùy Vân 200 Met, Vũng Tàu cao cấp tại Vũng Tàu. Cấu hình 5 giường đôi + 4 nệm dự phòng. Đầy đủ Hồ bơi riêng tràn bờ, Sân nướng BBQ, Bàn Bi-a phăng.",
     "votes": {
-      "yes": 13,
-      "maybe": 6,
-      "no": 1
+      "yes": 0,
+      "maybe": 0,
+      "no": 0
     },
     "lat": 10.34279,
     "lng": 107.08763,
@@ -2186,8 +2186,8 @@ export const mockVillas = [
     "groupFit": "perfect",
     "description": "Villa Luxury Chilinh - Large Swimming Pool - 200M To The Sea, Vũng Tàu cao cấp tại Vũng Tàu. Cấu hình 5 giường đôi + 4 nệm dự phòng. Đầy đủ Hồ bơi riêng tràn bờ, Sân nướng BBQ, Bàn Bi-a phăng.",
     "votes": {
-      "yes": 14,
-      "maybe": 3,
+      "yes": 0,
+      "maybe": 0,
       "no": 0
     },
     "lat": 10.34997,
@@ -2236,9 +2236,9 @@ export const mockVillas = [
     "groupFit": "perfect",
     "description": "Villa Villa 154/6C Trần Phú Vũng Tàu, Vũng Tàu cao cấp tại Vũng Tàu. Cấu hình 5 giường đôi + 4 nệm dự phòng. Đầy đủ Hồ bơi riêng tràn bờ, Sân nướng BBQ, Bàn Bi-a phăng.",
     "votes": {
-      "yes": 15,
-      "maybe": 4,
-      "no": 1
+      "yes": 0,
+      "maybe": 0,
+      "no": 0
     },
     "lat": 10.35136,
     "lng": 107.06547,
@@ -2285,8 +2285,8 @@ export const mockVillas = [
     "groupFit": "perfect",
     "description": "Villa SunDay Villa 13 NH - Đi Bộ Ra Biển - Free Bida - Karaoke, Vũng Tàu cao cấp tại Vũng Tàu. Cấu hình 5 giường đôi + 4 nệm dự phòng. Đầy đủ Bàn Bi-a phăng cao cấp, Loa Karaoke âm thanh vòm, Gần biển Bãi Sau (Đi bộ 2 phút).",
     "votes": {
-      "yes": 16,
-      "maybe": 5,
+      "yes": 0,
+      "maybe": 0,
       "no": 0
     },
     "lat": 10.33932,
@@ -2335,9 +2335,9 @@ export const mockVillas = [
     "groupFit": "perfect",
     "description": "Villa SANTORINI 17A - Gần Biển Bãi Sau Đi Bộ Ra Biển, Vũng Tàu cao cấp tại Vũng Tàu. Cấu hình 5 giường đôi + 4 nệm dự phòng. Đầy đủ Hồ bơi riêng tràn bờ, Sân nướng BBQ, Bàn Bi-a phăng.",
     "votes": {
-      "yes": 17,
-      "maybe": 6,
-      "no": 1
+      "yes": 0,
+      "maybe": 0,
+      "no": 0
     },
     "lat": 10.3475,
     "lng": 107.09007,
@@ -2385,8 +2385,8 @@ export const mockVillas = [
     "groupFit": "perfect",
     "description": "Villa Yubi Villa Private Swimming Pool 100m2 - Super Vip, Vũng Tàu cao cấp tại Vũng Tàu. Cấu hình 5 giường đôi + 4 nệm dự phòng. Đầy đủ Hồ bơi riêng tràn bờ, Sân nướng BBQ, Bàn Bi-a phăng.",
     "votes": {
-      "yes": 12,
-      "maybe": 3,
+      "yes": 0,
+      "maybe": 0,
       "no": 0
     },
     "lat": 10.33876,
@@ -2435,9 +2435,9 @@ export const mockVillas = [
     "groupFit": "perfect",
     "description": "Villa Hoàng My Villa 10 Phòng ngủ - Bãi Sau Vũng Tàu, Vũng Tàu cao cấp tại Vũng Tàu. Cấu hình 10 giường đôi + 4 nệm dự phòng. Đầy đủ Hồ bơi riêng tràn bờ, Sân nướng BBQ, Bàn Bi-a phăng.",
     "votes": {
-      "yes": 13,
-      "maybe": 4,
-      "no": 1
+      "yes": 0,
+      "maybe": 0,
+      "no": 0
     },
     "lat": 10.34995,
     "lng": 107.09135,
@@ -2485,8 +2485,8 @@ export const mockVillas = [
     "groupFit": "perfect",
     "description": "Villa penthouse 5pn Oasky, Vũng Tàu cao cấp tại Vũng Tàu. Cấu hình 5 giường đôi + 4 nệm dự phòng. Đầy đủ Hồ bơi riêng tràn bờ, Sân nướng BBQ, Bàn Bi-a phăng.",
     "votes": {
-      "yes": 14,
-      "maybe": 5,
+      "yes": 0,
+      "maybe": 0,
       "no": 0
     },
     "lat": 10.34965,
