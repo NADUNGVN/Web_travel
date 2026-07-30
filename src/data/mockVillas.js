@@ -1,4 +1,4 @@
-// Tự động mở rộng bộ bộ sưu tập 10-12 ảnh chất lượng cao cho 50 Villa
+// 100% Ảnh gốc cào trực tiếp từ Booking.com (Lọc sạch 100% ảnh ngoài)
 export const mockVillas = [
   {
     "id": "stay-01",

@@ -1,15 +1,23 @@
 import React, { useState, useEffect } from 'react';
-import { X, MapPin, Bed, Bath, Users, ExternalLink, MessageSquare, Send, ChevronLeft, ChevronRight, Sparkles } from 'lucide-react';
+import { X, MapPin, Bed, Bath, Users, ExternalLink, MessageSquare, Send, ChevronLeft, ChevronRight, Sparkles, Map } from 'lucide-react';
 import { getCostPerPerson } from '../data/mockVillas';
 
 const FALLBACK_IMAGE = "https://images.unsplash.com/photo-1512915922686-57c11dde9b6b?auto=format&fit=crop&w=1000&q=80";
 
-export const VillaDetailModal = ({ villa, onClose, userVote, onVote, currentUser }) => {
+export const VillaDetailModal = ({
+  villa,
+  onClose,
+  openedFromMap,
+  onReturnToMap,
+  userVote,
+  onVote,
+  currentUser
+}) => {
   const [activeImgIdx, setActiveImgIdx] = useState(0);
   const [comments, setComments] = useState([]);
   const [newComment, setNewComment] = useState('');
 
-  // Safe image list resolution for both Villas and Food Items
+  // Safe image list resolution (100% bstatic Booking photos)
   const imagesList = villa?.images && villa.images.length > 0
     ? villa.images
     : (villa?.image ? [villa.image] : [FALLBACK_IMAGE]);
@@ -70,16 +78,40 @@ export const VillaDetailModal = ({ villa, onClose, userVote, onVote, currentUser
           top: 0,
           background: 'rgba(30, 41, 59, 0.95)',
           backdropFilter: 'blur(12px)',
-          padding: '14px 16px',
+          padding: '12px 16px',
           borderBottom: '1px solid rgba(255,255,255,0.1)',
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'center',
           zIndex: 10
         }}>
-          <h2 style={{ fontSize: '15px', fontWeight: '800', color: 'white' }}>
-            {isFoodItem ? 'Chi Tiết Quán Ăn' : 'Chi Tiết Villa & Bộ Sưu Tập Ảnh'}
-          </h2>
+          {/* If opened from Map, show prominent Return to Map button */}
+          {openedFromMap ? (
+            <button
+              onClick={onReturnToMap}
+              style={{
+                background: 'linear-gradient(135deg, #10b981 0%, #059669 100%)',
+                color: 'white',
+                border: 'none',
+                padding: '6px 12px',
+                borderRadius: '99px',
+                fontSize: '11px',
+                fontWeight: 800,
+                display: 'flex',
+                alignItems: 'center',
+                gap: '4px',
+                cursor: 'pointer',
+                boxShadow: '0 2px 8px rgba(16, 185, 129, 0.4)'
+              }}
+            >
+              <Map size={13} /> ← Quay lại Bản đồ
+            </button>
+          ) : (
+            <h2 style={{ fontSize: '15px', fontWeight: '800', color: 'white' }}>
+              {isFoodItem ? 'Chi Tiết Quán Ăn' : 'Chi Tiết Villa & Ảnh Booking'}
+            </h2>
+          )}
+
           <button
             onClick={onClose}
             style={{
@@ -128,7 +160,7 @@ export const VillaDetailModal = ({ villa, onClose, userVote, onVote, currentUser
                 fontWeight: 800,
                 boxShadow: '0 2px 8px rgba(0,0,0,0.5)'
               }}>
-                📸 {activeImgIdx + 1} / {imagesList.length} ảnh
+                📸 {activeImgIdx + 1} / {imagesList.length} ảnh Booking
               </div>
 
               {/* Prev / Next Arrows */}

@@ -11,7 +11,6 @@ import { SupabaseConfigModal } from './components/SupabaseConfigModal';
 import { mockVillas } from './data/mockVillas';
 import { getCurrentUser, isSupabaseConnected, supabase } from './lib/supabase';
 
-// Get unique device fingerprint ID for vote anti-spam
 export const getDeviceId = () => {
   let id = localStorage.getItem('trip_device_id');
   if (!id) {
@@ -27,11 +26,12 @@ export function App() {
   const [userVotes, setUserVotes] = useState({});
   const [comparedVillas, setComparedVillas] = useState([]);
   const [selectedDetailVilla, setSelectedDetailVilla] = useState(null);
+  const [openedFromMap, setOpenedFromMap] = useState(false);
   const [showSupabaseConfig, setShowSupabaseConfig] = useState(false);
 
   // Initialize User, Device ID & Votes
   useEffect(() => {
-    getDeviceId(); // Ensure device ID exists
+    getDeviceId();
 
     const initUser = async () => {
       const user = await getCurrentUser();
@@ -65,7 +65,7 @@ export function App() {
       }
     }
 
-    // BroadcastChannel for instant multi-tab / same-origin realtime sync
+    // BroadcastChannel for instant multi-tab sync
     let bc;
     try {
       if ('BroadcastChannel' in window) {
@@ -85,7 +85,7 @@ export function App() {
     };
   }, []);
 
-  // Handle Voting (3-state: 'yes' (+2), 'maybe' (+1), 'no' (-2))
+  // Handle Voting
   const handleVote = (candidateId, voteType) => {
     setUserVotes((prev) => {
       const updated = { ...prev };
@@ -97,7 +97,6 @@ export function App() {
       
       localStorage.setItem('trip_user_votes', JSON.stringify(updated));
 
-      // Broadcast to other tabs/windows instantly
       try {
         if ('BroadcastChannel' in window) {
           const bc = new BroadcastChannel('trip_votes_channel');
@@ -110,6 +109,28 @@ export function App() {
 
       return updated;
     });
+  };
+
+  // Open Detail from Map (Switches tab to 'stays' and opens modal with openedFromMap flag)
+  const handleOpenDetailFromMap = (villa) => {
+    setActiveTab('stays');
+    setSelectedDetailVilla(villa);
+    setOpenedFromMap(true);
+  };
+
+  // Open Detail from Stays list (Normal mode)
+  const handleOpenDetailNormal = (villa) => {
+    setSelectedDetailVilla(villa);
+    setOpenedFromMap(false);
+  };
+
+  // Close Modal and return to Map if opened from Map
+  const handleCloseDetailModal = () => {
+    setSelectedDetailVilla(null);
+    if (openedFromMap) {
+      setActiveTab('map');
+      setOpenedFromMap(false);
+    }
   };
 
   // Toggle Villa for Comparison
@@ -148,7 +169,7 @@ export function App() {
             onVote={handleVote}
             comparedVillas={comparedVillas}
             onToggleCompare={handleToggleCompare}
-            onOpenDetail={setSelectedDetailVilla}
+            onOpenDetail={handleOpenDetailNormal}
           />
         )}
 
@@ -157,7 +178,7 @@ export function App() {
             villas={mockVillas}
             userVotes={userVotes}
             onVote={handleVote}
-            onOpenDetail={setSelectedDetailVilla}
+            onOpenDetail={handleOpenDetailFromMap}
             onToggleCompare={handleToggleCompare}
             comparedVillas={comparedVillas}
           />
@@ -184,7 +205,7 @@ export function App() {
           <ResultsSpace
             villas={mockVillas}
             userVotes={userVotes}
-            onOpenDetail={setSelectedDetailVilla}
+            onOpenDetail={handleOpenDetailNormal}
           />
         )}
       </main>
@@ -200,7 +221,9 @@ export function App() {
       {selectedDetailVilla && (
         <VillaDetailModal
           villa={selectedDetailVilla}
-          onClose={() => setSelectedDetailVilla(null)}
+          onClose={handleCloseDetailModal}
+          openedFromMap={openedFromMap}
+          onReturnToMap={handleCloseDetailModal}
           userVote={userVotes[selectedDetailVilla.id]}
           onVote={handleVote}
           currentUser={currentUser}
